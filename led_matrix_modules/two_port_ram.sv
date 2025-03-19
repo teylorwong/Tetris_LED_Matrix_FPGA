@@ -1,3 +1,7 @@
+//Read Write RAM. 
+//Author: Jake Forsyth, Adapted from Joseph Primmer https://uselessrobots.com/2021/01/12/adafruit-led-matrix-control-w-verilog-part-2/
+//Commenced: Feb 2025
+
 module two_port_ram(
 	input logic reset,
 	input logic [8:0] address_a,

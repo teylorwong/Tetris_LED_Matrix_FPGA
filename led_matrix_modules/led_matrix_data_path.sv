@@ -1,3 +1,7 @@
+//Matrix Data Path
+//Author: Jake Forsyth, Adapted from Joseph Primmer https://uselessrobots.com/2021/01/12/adafruit-led-matrix-control-w-verilog-part-2/
+//Commenced: Feb 2025
+
 module led_matrix_data_path(
 	input logic CLK, 
 	input logic RESET, 
