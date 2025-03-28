@@ -44,19 +44,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "enc2_a",
-					"strict" : false
-				},
-				{
-					"name" : "enc2_b",
-					"strict" : false
-				},
-				{
 					"name" : "enc1_a",
 					"strict" : false
 				},
 				{
 					"name" : "enc1_b",
+					"strict" : false
+				},
+				{
+					"name" : "enc2_a",
+					"strict" : false
+				},
+				{
+					"name" : "enc2_b",
 					"strict" : false
 				}
 			]

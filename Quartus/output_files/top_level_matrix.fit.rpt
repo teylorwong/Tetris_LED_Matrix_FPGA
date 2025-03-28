@@ -1,5 +1,5 @@
 Fitter report for top_level_matrix
-Thu Mar 27 12:09:00 2025
+Thu Mar 27 20:20:39 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Thu Mar 27 12:09:00 2025       ;
+; Fitter Status                   ; Successful - Thu Mar 27 20:20:39 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; top_level_matrix                            ;
 ; Top-level Entity Name           ; top_level_matrix                            ;
@@ -72,7 +72,7 @@ refer to the applicable agreement for further details.
 ; Device                          ; 5CSEMA4U23C6                                ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; 1,006 / 15,880 ( 6 % )                      ;
-; Total registers                 ; 1311                                        ;
+; Total registers                 ; 1309                                        ;
 ; Total pins                      ; 23 / 314 ( 7 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 2,764,800 ( 0 % )                       ;
@@ -154,7 +154,7 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 10          ;
 ;                            ;             ;
-; Average used               ; 1.10        ;
+; Average used               ; 1.09        ;
 ; Maximum used               ; 10          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
@@ -162,12 +162,12 @@ refer to the applicable agreement for further details.
 ;     Processor 2            ;   1.8%      ;
 ;     Processor 3            ;   1.7%      ;
 ;     Processor 4            ;   1.6%      ;
-;     Processor 5            ;   0.8%      ;
-;     Processor 6            ;   0.8%      ;
-;     Processor 7            ;   0.8%      ;
-;     Processor 8            ;   0.8%      ;
-;     Processor 9            ;   0.8%      ;
-;     Processor 10           ;   0.8%      ;
+;     Processor 5            ;   0.7%      ;
+;     Processor 6            ;   0.7%      ;
+;     Processor 7            ;   0.7%      ;
+;     Processor 8            ;   0.7%      ;
+;     Processor 9            ;   0.6%      ;
+;     Processor 10           ;   0.6%      ;
 +----------------------------+-------------+
 
 
@@ -178,175 +178,173 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+--------------------------------------------------------------------------------------+------------------+-----------------------+
 ; CLK~inputCLKENA0                                                           ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                                                      ;                  ;                       ;
 ; s1~inputCLKENA0                                                            ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                                                      ;                  ;                       ;
-; encoder:encoder_2|a_stable                                                 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; encoder:encoder_2|a_stable~DUPLICATE                                                 ;                  ;                       ;
+; encoder:encoder_1|ccw_count[1]                                             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; encoder:encoder_1|ccw_count[1]~DUPLICATE                                             ;                  ;                       ;
+; encoder:encoder_2|ccw_count[0]                                             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; encoder:encoder_2|ccw_count[0]~DUPLICATE                                             ;                  ;                       ;
+; encoder:encoder_2|cw_count[0]                                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; encoder:encoder_2|cw_count[0]~DUPLICATE                                              ;                  ;                       ;
+; etch_a_sketch:game_logic|cursor_pos[0]                                     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|cursor_pos[0]~DUPLICATE                                     ;                  ;                       ;
 ; etch_a_sketch:game_logic|cursor_pos[1]                                     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|cursor_pos[1]~DUPLICATE                                     ;                  ;                       ;
 ; etch_a_sketch:game_logic|cursor_pos[3]                                     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|cursor_pos[3]~DUPLICATE                                     ;                  ;                       ;
+; etch_a_sketch:game_logic|cursor_pos[6]                                     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|cursor_pos[6]~DUPLICATE                                     ;                  ;                       ;
+; etch_a_sketch:game_logic|cursor_pos[7]                                     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|cursor_pos[7]~DUPLICATE                                     ;                  ;                       ;
 ; etch_a_sketch:game_logic|cursor_pos[8]                                     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|cursor_pos[8]~DUPLICATE                                     ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[0][0]                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[0][0]~DUPLICATE                                ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[2][0]                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[2][0]~DUPLICATE                                ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[6][0]                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[6][0]~DUPLICATE                                ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[8][0]                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[8][0]~DUPLICATE                                ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[16][0]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[16][0]~DUPLICATE                               ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[32][0]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[32][0]~DUPLICATE                               ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[34][0]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[34][0]~DUPLICATE                               ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[12][0]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[12][0]~DUPLICATE                               ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[24][0]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[24][0]~DUPLICATE                               ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[35][0]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[35][0]~DUPLICATE                               ;                  ;                       ;
 ; etch_a_sketch:game_logic|input_matrix[37][0]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[37][0]~DUPLICATE                               ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[43][0]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[43][0]~DUPLICATE                               ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[47][0]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[47][0]~DUPLICATE                               ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[66][0]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[66][0]~DUPLICATE                               ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[72][0]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[72][0]~DUPLICATE                               ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[78][0]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[78][0]~DUPLICATE                               ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[80][0]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[80][0]~DUPLICATE                               ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[81][0]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[81][0]~DUPLICATE                               ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[90][0]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[90][0]~DUPLICATE                               ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[91][0]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[91][0]~DUPLICATE                               ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[96][0]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[96][0]~DUPLICATE                               ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[41][0]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[41][0]~DUPLICATE                               ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[45][0]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[45][0]~DUPLICATE                               ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[48][0]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[48][0]~DUPLICATE                               ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[56][0]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[56][0]~DUPLICATE                               ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[67][0]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[67][0]~DUPLICATE                               ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[76][0]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[76][0]~DUPLICATE                               ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[77][0]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[77][0]~DUPLICATE                               ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[84][0]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[84][0]~DUPLICATE                               ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[88][0]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[88][0]~DUPLICATE                               ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[89][0]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[89][0]~DUPLICATE                               ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[98][0]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[98][0]~DUPLICATE                               ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[102][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[102][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[105][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[105][0]~DUPLICATE                              ;                  ;                       ;
 ; etch_a_sketch:game_logic|input_matrix[108][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[108][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[112][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[112][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[110][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[110][0]~DUPLICATE                              ;                  ;                       ;
 ; etch_a_sketch:game_logic|input_matrix[113][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[113][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[114][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[114][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[120][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[120][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[134][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[134][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[138][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[138][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[152][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[152][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[153][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[153][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[154][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[154][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[155][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[155][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[157][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[157][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[121][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[121][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[132][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[132][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[139][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[139][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[142][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[142][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[150][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[150][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[160][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[160][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[165][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[165][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[169][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[169][0]~DUPLICATE                              ;                  ;                       ;
 ; etch_a_sketch:game_logic|input_matrix[172][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[172][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[188][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[188][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[202][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[202][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[215][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[215][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[217][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[217][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[222][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[222][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[223][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[223][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[228][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[228][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[238][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[238][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[258][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[258][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[173][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[173][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[176][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[176][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[194][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[194][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[196][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[196][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[216][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[216][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[220][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[220][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[226][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[226][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[227][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[227][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[233][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[233][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[242][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[242][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[245][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[245][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[252][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[252][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[254][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[254][0]~DUPLICATE                              ;                  ;                       ;
 ; etch_a_sketch:game_logic|input_matrix[262][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[262][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[266][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[266][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[287][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[287][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[292][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[292][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[302][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[302][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[303][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[303][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[332][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[332][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[337][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[337][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[341][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[341][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[345][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[345][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[373][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[373][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[375][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[375][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[376][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[376][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[379][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[379][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[396][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[396][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[277][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[277][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[282][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[282][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[288][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[288][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[291][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[291][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[295][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[295][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[297][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[297][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[299][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[299][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[321][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[321][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[324][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[324][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[335][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[335][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[353][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[353][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[358][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[358][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[361][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[361][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[372][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[372][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[377][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[377][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[394][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[394][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[409][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[409][0]~DUPLICATE                              ;                  ;                       ;
 ; etch_a_sketch:game_logic|input_matrix[410][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[410][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[426][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[426][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[428][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[428][0]~DUPLICATE                              ;                  ;                       ;
 ; etch_a_sketch:game_logic|input_matrix[429][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[429][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[432][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[432][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[463][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[463][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[456][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[456][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[457][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[457][0]~DUPLICATE                              ;                  ;                       ;
 ; etch_a_sketch:game_logic|input_matrix[472][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[472][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[482][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[482][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[484][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[484][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[487][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[487][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[491][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[491][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[475][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[475][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[486][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[486][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[492][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[492][0]~DUPLICATE                              ;                  ;                       ;
+; etch_a_sketch:game_logic|input_matrix[494][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[494][0]~DUPLICATE                              ;                  ;                       ;
 ; etch_a_sketch:game_logic|input_matrix[496][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[496][0]~DUPLICATE                              ;                  ;                       ;
-; etch_a_sketch:game_logic|input_matrix[499][0]                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; etch_a_sketch:game_logic|input_matrix[499][0]~DUPLICATE                              ;                  ;                       ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[21]                             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_ctrl_path:ctrl_path|cycle_count[21]~DUPLICATE                             ;                  ;                       ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[23]                             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_ctrl_path:ctrl_path|cycle_count[23]~DUPLICATE                             ;                  ;                       ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[25]                             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_ctrl_path:ctrl_path|cycle_count[25]~DUPLICATE                             ;                  ;                       ;
+; led_matrix_ctrl_path:ctrl_path|cycle_count[24]                             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_ctrl_path:ctrl_path|cycle_count[24]~DUPLICATE                             ;                  ;                       ;
 ; led_matrix_ctrl_path:ctrl_path|cycle_count[26]                             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_ctrl_path:ctrl_path|cycle_count[26]~DUPLICATE                             ;                  ;                       ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[27]                             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_ctrl_path:ctrl_path|cycle_count[27]~DUPLICATE                             ;                  ;                       ;
-; led_matrix_ctrl_path:ctrl_path|row_addr[1]                                 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_ctrl_path:ctrl_path|row_addr[1]~DUPLICATE                                 ;                  ;                       ;
-; led_matrix_ctrl_path:ctrl_path|state.DEAD                                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_ctrl_path:ctrl_path|state.DEAD~DUPLICATE                                  ;                  ;                       ;
+; led_matrix_ctrl_path:ctrl_path|cycle_count[29]                             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_ctrl_path:ctrl_path|cycle_count[29]~DUPLICATE                             ;                  ;                       ;
+; led_matrix_ctrl_path:ctrl_path|state.DATA                                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_ctrl_path:ctrl_path|state.DATA~DUPLICATE                                  ;                  ;                       ;
 ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_ctrl_path:ctrl_path|state.INC~DUPLICATE                                   ;                  ;                       ;
-; led_matrix_ctrl_path:ctrl_path|state.INIT                                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_ctrl_path:ctrl_path|state.INIT~DUPLICATE                                  ;                  ;                       ;
-; led_matrix_data_path:data_path|addr[5]                                     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|addr[5]~DUPLICATE                                     ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|address_b_pipe[1] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|address_b_pipe[1]~DUPLICATE ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|address_b_pipe[3] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|address_b_pipe[3]~DUPLICATE ;                  ;                       ;
+; led_matrix_ctrl_path:ctrl_path|state.PRE                                   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_ctrl_path:ctrl_path|state.PRE~DUPLICATE                                   ;                  ;                       ;
+; led_matrix_data_path:data_path|addr[1]                                     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|addr[1]~DUPLICATE                                     ;                  ;                       ;
+; led_matrix_data_path:data_path|addr[2]                                     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|addr[2]~DUPLICATE                                     ;                  ;                       ;
 ; led_matrix_data_path:data_path|two_port_ram:color_matrix|address_b_pipe[4] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|address_b_pipe[4]~DUPLICATE ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|address_b_pipe[5] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|address_b_pipe[5]~DUPLICATE ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|address_b_pipe[6] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|address_b_pipe[6]~DUPLICATE ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|address_b_pipe[7] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|address_b_pipe[7]~DUPLICATE ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[3][0]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[3][0]~DUPLICATE         ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[8][0]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[8][0]~DUPLICATE         ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[15][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[15][0]~DUPLICATE        ;                  ;                       ;
 ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[16][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[16][0]~DUPLICATE        ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[22][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[22][0]~DUPLICATE        ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[23][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[23][0]~DUPLICATE        ;                  ;                       ;
 ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[26][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[26][0]~DUPLICATE        ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[28][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[28][0]~DUPLICATE        ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[29][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[29][0]~DUPLICATE        ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[32][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[32][0]~DUPLICATE        ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[33][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[33][0]~DUPLICATE        ;                  ;                       ;
 ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[38][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[38][0]~DUPLICATE        ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[41][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[41][0]~DUPLICATE        ;                  ;                       ;
 ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[42][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[42][0]~DUPLICATE        ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[44][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[44][0]~DUPLICATE        ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[45][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[45][0]~DUPLICATE        ;                  ;                       ;
 ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[50][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[50][0]~DUPLICATE        ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[54][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[54][0]~DUPLICATE        ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[56][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[56][0]~DUPLICATE        ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[57][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[57][0]~DUPLICATE        ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[51][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[51][0]~DUPLICATE        ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[53][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[53][0]~DUPLICATE        ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[60][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[60][0]~DUPLICATE        ;                  ;                       ;
 ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[61][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[61][0]~DUPLICATE        ;                  ;                       ;
 ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[66][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[66][0]~DUPLICATE        ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[70][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[70][0]~DUPLICATE        ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[82][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[82][0]~DUPLICATE        ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[71][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[71][0]~DUPLICATE        ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[76][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[76][0]~DUPLICATE        ;                  ;                       ;
 ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[83][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[83][0]~DUPLICATE        ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[89][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[89][0]~DUPLICATE        ;                  ;                       ;
 ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[90][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[90][0]~DUPLICATE        ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[94][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[94][0]~DUPLICATE        ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[96][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[96][0]~DUPLICATE        ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[101][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[101][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[122][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[122][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[130][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[130][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[135][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[135][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[146][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[146][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[147][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[147][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[149][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[149][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[160][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[160][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[95][0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[95][0]~DUPLICATE        ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[102][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[102][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[103][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[103][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[116][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[116][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[121][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[121][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[126][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[126][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[128][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[128][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[129][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[129][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[131][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[131][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[133][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[133][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[139][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[139][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[148][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[148][0]~DUPLICATE       ;                  ;                       ;
 ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[161][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[161][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[162][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[162][0]~DUPLICATE       ;                  ;                       ;
 ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[168][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[168][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[182][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[182][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[185][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[185][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[197][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[197][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[206][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[206][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[170][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[170][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[174][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[174][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[176][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[176][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[180][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[180][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[199][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[199][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[220][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[220][0]~DUPLICATE       ;                  ;                       ;
 ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[225][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[225][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[228][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[228][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[242][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[242][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[251][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[251][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[272][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[272][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[274][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[274][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[278][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[278][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[235][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[235][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[268][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[268][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[277][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[277][0]~DUPLICATE       ;                  ;                       ;
 ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[280][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[280][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[284][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[284][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[285][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[285][0]~DUPLICATE       ;                  ;                       ;
 ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[291][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[291][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[299][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[299][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[305][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[305][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[294][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[294][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[296][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[296][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[306][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[306][0]~DUPLICATE       ;                  ;                       ;
 ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[308][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[308][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[309][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[309][0]~DUPLICATE       ;                  ;                       ;
 ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[310][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[310][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[312][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[312][0]~DUPLICATE       ;                  ;                       ;
 ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[323][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[323][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[326][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[326][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[335][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[335][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[346][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[346][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[353][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[353][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[329][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[329][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[331][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[331][0]~DUPLICATE       ;                  ;                       ;
 ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[354][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[354][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[355][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[355][0]~DUPLICATE       ;                  ;                       ;
 ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[362][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[362][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[379][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[379][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[386][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[386][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[403][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[403][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[406][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[406][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[418][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[418][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[419][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[419][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[429][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[429][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[432][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[432][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[435][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[435][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[438][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[438][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[439][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[439][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[444][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[444][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[447][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[447][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[363][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[363][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[375][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[375][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[383][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[383][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[394][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[394][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[400][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[400][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[409][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[409][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[413][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[413][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[416][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[416][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[422][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[422][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[449][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[449][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[450][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[450][0]~DUPLICATE       ;                  ;                       ;
 ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[453][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[453][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[455][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[455][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[471][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[471][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[475][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[475][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[480][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[480][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[464][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[464][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[465][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[465][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[468][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[468][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[474][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[474][0]~DUPLICATE       ;                  ;                       ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[483][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[483][0]~DUPLICATE       ;                  ;                       ;
 ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[490][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[490][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[505][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[505][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[507][0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[507][0]~DUPLICATE       ;                  ;                       ;
-; led_matrix_data_path:data_path|write_addr[1]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|write_addr[1]~DUPLICATE                               ;                  ;                       ;
+; led_matrix_data_path:data_path|write_addr[2]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|write_addr[2]~DUPLICATE                               ;                  ;                       ;
 ; led_matrix_data_path:data_path|write_addr[4]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|write_addr[4]~DUPLICATE                               ;                  ;                       ;
 ; led_matrix_data_path:data_path|write_data[0]                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; led_matrix_data_path:data_path|write_data[0]~DUPLICATE                               ;                  ;                       ;
 +----------------------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+--------------------------------------------------------------------------------------+------------------+-----------------------+
@@ -529,22 +527,22 @@ The pin-out file can be found in C:/Users/teylo/Documents/GitHub/Tetris_LED_Matr
 +-------------------------------------------------------------+-----------------------+-------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 1,006 / 15,880        ; 6 %   ;
 ; ALMs needed [=A-B+C]                                        ; 1,006                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 1,218 / 15,880        ; 8 %   ;
-;         [a] ALMs used for LUT logic and registers           ; 247                   ;       ;
-;         [b] ALMs used for LUT logic                         ; 648                   ;       ;
-;         [c] ALMs used for registers                         ; 323                   ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 1,216 / 15,880        ; 8 %   ;
+;         [a] ALMs used for LUT logic and registers           ; 242                   ;       ;
+;         [b] ALMs used for LUT logic                         ; 646                   ;       ;
+;         [c] ALMs used for registers                         ; 328                   ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 215 / 15,880          ; 1 %   ;
-;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 3 / 15,880            ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 211 / 15,880          ; 1 %   ;
+;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 1 / 15,880            ; < 1 % ;
 ;         [a] Due to location constrained logic               ; 0                     ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                     ;       ;
-;         [c] Due to LAB input limits                         ; 3                     ;       ;
+;         [c] Due to LAB input limits                         ; 1                     ;       ;
 ;         [d] Due to virtual I/Os                             ; 0                     ;       ;
 ;                                                             ;                       ;       ;
 ; Difficulty packing design                                   ; Low                   ;       ;
 ;                                                             ;                       ;       ;
-; Total LABs:  partially or completely used                   ; 145 / 1,588           ; 9 %   ;
-;     -- Logic LABs                                           ; 145                   ;       ;
+; Total LABs:  partially or completely used                   ; 151 / 1,588           ; 10 %  ;
+;     -- Logic LABs                                           ; 151                   ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ;       ;
 ;                                                             ;                       ;       ;
 ; Combinational ALUT usage for logic                          ; 1,630                 ;       ;
@@ -553,15 +551,15 @@ The pin-out file can be found in C:/Users/teylo/Documents/GitHub/Tetris_LED_Matr
 ;     -- 5 input functions                                    ; 17                    ;       ;
 ;     -- 4 input functions                                    ; 744                   ;       ;
 ;     -- <=3 input functions                                  ; 416                   ;       ;
-; Combinational ALUT usage for route-throughs                 ; 52                    ;       ;
+; Combinational ALUT usage for route-throughs                 ; 66                    ;       ;
 ;                                                             ;                       ;       ;
-; Dedicated logic registers                                   ; 1,311                 ;       ;
+; Dedicated logic registers                                   ; 1,309                 ;       ;
 ;     -- By type:                                             ;                       ;       ;
 ;         -- Primary logic registers                          ; 1,139 / 31,760        ; 4 %   ;
-;         -- Secondary logic registers                        ; 172 / 31,760          ; < 1 % ;
+;         -- Secondary logic registers                        ; 170 / 31,760          ; < 1 % ;
 ;     -- By function:                                         ;                       ;       ;
 ;         -- Design implementation registers                  ; 1,140                 ;       ;
-;         -- Routing optimization registers                   ; 171                   ;       ;
+;         -- Routing optimization registers                   ; 169                   ;       ;
 ;                                                             ;                       ;       ;
 ; Virtual pins                                                ; 0                     ;       ;
 ; I/O pins                                                    ; 23 / 314              ; 7 %   ;
@@ -616,12 +614,12 @@ The pin-out file can be found in C:/Users/teylo/Documents/GitHub/Tetris_LED_Matr
 ; Oscillator blocks                                           ; 0 / 1                 ; 0 %   ;
 ; Impedance control blocks                                    ; 0 / 3                 ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2                 ; 0 %   ;
-; Average interconnect usage (total/H/V)                      ; 2.2% / 2.3% / 1.8%    ;       ;
-; Peak interconnect usage (total/H/V)                         ; 21.1% / 23.1% / 15.3% ;       ;
-; Maximum fan-out                                             ; 1310                  ;       ;
-; Highest non-global fan-out                                  ; 1310                  ;       ;
-; Total fan-out                                               ; 10311                 ;       ;
-; Average fan-out                                             ; 3.39                  ;       ;
+; Average interconnect usage (total/H/V)                      ; 2.0% / 2.2% / 1.7%    ;       ;
+; Peak interconnect usage (total/H/V)                         ; 18.1% / 19.7% / 13.4% ;       ;
+; Maximum fan-out                                             ; 1308                  ;       ;
+; Highest non-global fan-out                                  ; 1308                  ;       ;
+; Total fan-out                                               ; 10324                 ;       ;
+; Average fan-out                                             ; 3.38                  ;       ;
 +-------------------------------------------------------------+-----------------------+-------+
 
 
@@ -632,22 +630,22 @@ The pin-out file can be found in C:/Users/teylo/Documents/GitHub/Tetris_LED_Matr
 +-------------------------------------------------------------+-----------------------+--------------------------------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 1006 / 15880 ( 6 % )  ; 0 / 15880 ( 0 % )              ;
 ; ALMs needed [=A-B+C]                                        ; 1006                  ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 1218 / 15880 ( 8 % )  ; 0 / 15880 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 247                   ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 648                   ; 0                              ;
-;         [c] ALMs used for registers                         ; 323                   ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 1216 / 15880 ( 8 % )  ; 0 / 15880 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 242                   ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 646                   ; 0                              ;
+;         [c] ALMs used for registers                         ; 328                   ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 215 / 15880 ( 1 % )   ; 0 / 15880 ( 0 % )              ;
-;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 3 / 15880 ( < 1 % )   ; 0 / 15880 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 211 / 15880 ( 1 % )   ; 0 / 15880 ( 0 % )              ;
+;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 1 / 15880 ( < 1 % )   ; 0 / 15880 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                     ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                     ; 0                              ;
-;         [c] Due to LAB input limits                         ; 3                     ; 0                              ;
+;         [c] Due to LAB input limits                         ; 1                     ; 0                              ;
 ;         [d] Due to virtual I/Os                             ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Difficulty packing design                                   ; Low                   ; Low                            ;
 ;                                                             ;                       ;                                ;
-; Total LABs:  partially or completely used                   ; 145 / 1588 ( 9 % )    ; 0 / 1588 ( 0 % )               ;
-;     -- Logic LABs                                           ; 145                   ; 0                              ;
+; Total LABs:  partially or completely used                   ; 151 / 1588 ( 10 % )   ; 0 / 1588 ( 0 % )               ;
+;     -- Logic LABs                                           ; 151                   ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Combinational ALUT usage for logic                          ; 1630                  ; 0                              ;
@@ -656,7 +654,7 @@ The pin-out file can be found in C:/Users/teylo/Documents/GitHub/Tetris_LED_Matr
 ;     -- 5 input functions                                    ; 17                    ; 0                              ;
 ;     -- 4 input functions                                    ; 744                   ; 0                              ;
 ;     -- <=3 input functions                                  ; 416                   ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 52                    ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 66                    ; 0                              ;
 ; Memory ALUT usage                                           ; 0                     ; 0                              ;
 ;     -- 64-address deep                                      ; 0                     ; 0                              ;
 ;     -- 32-address deep                                      ; 0                     ; 0                              ;
@@ -664,10 +662,10 @@ The pin-out file can be found in C:/Users/teylo/Documents/GitHub/Tetris_LED_Matr
 ; Dedicated logic registers                                   ; 0                     ; 0                              ;
 ;     -- By type:                                             ;                       ;                                ;
 ;         -- Primary logic registers                          ; 1139 / 31760 ( 4 % )  ; 0 / 31760 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 172 / 31760 ( < 1 % ) ; 0 / 31760 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 170 / 31760 ( < 1 % ) ; 0 / 31760 ( 0 % )              ;
 ;     -- By function:                                         ;                       ;                                ;
 ;         -- Design implementation registers                  ; 1140                  ; 0                              ;
-;         -- Routing optimization registers                   ; 171                   ; 0                              ;
+;         -- Routing optimization registers                   ; 169                   ; 0                              ;
 ;                                                             ;                       ;                                ;
 ;                                                             ;                       ;                                ;
 ; Virtual pins                                                ; 0                     ; 0                              ;
@@ -684,8 +682,8 @@ The pin-out file can be found in C:/Users/teylo/Documents/GitHub/Tetris_LED_Matr
 ;     -- Registered Output Connections                        ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Internal Connections                                        ;                       ;                                ;
-;     -- Total Connections                                    ; 10311                 ; 0                              ;
-;     -- Registered Connections                               ; 5664                  ; 0                              ;
+;     -- Total Connections                                    ; 10324                 ; 0                              ;
+;     -- Registered Connections                               ; 5658                  ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; External Connections                                        ;                       ;                                ;
 ;     -- Top                                                  ; 0                     ; 0                              ;
@@ -720,10 +718,10 @@ The pin-out file can be found in C:/Users/teylo/Documents/GitHub/Tetris_LED_Matr
 ; CLK    ; V11   ; 3B       ; 15           ; 0            ; 0            ; 3                     ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; enc1_a ; AC22  ; 4A       ; 64           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; On           ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; enc1_b ; AE23  ; 4A       ; 62           ; 0            ; 57           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; On           ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; enc2_a ; AF13  ; 4A       ; 32           ; 0            ; 57           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; On           ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; enc2_b ; AG8   ; 4A       ; 32           ; 0            ; 74           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; On           ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; reset  ; AE20  ; 4A       ; 51           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; s1     ; AH23  ; 4A       ; 59           ; 0            ; 34           ; 591                   ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; enc2_a ; AE6   ; 3A       ; 7            ; 0            ; 51           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; On           ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; enc2_b ; AD10  ; 3B       ; 10           ; 0            ; 40           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; On           ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; reset  ; AF15  ; 4A       ; 36           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; s1     ; AH23  ; 4A       ; 59           ; 0            ; 34           ; 598                   ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -757,9 +755,9 @@ The pin-out file can be found in C:/Users/teylo/Documents/GitHub/Tetris_LED_Matr
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ; VCCPD Voltage ;
 +----------+------------------+---------------+--------------+---------------+
 ; B1L      ; 0 / 0 ( -- )     ; --            ; --           ; --            ;
-; 3A       ; 1 / 16 ( 6 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 3B       ; 16 / 32 ( 50 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 4A       ; 6 / 68 ( 9 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 3A       ; 2 / 16 ( 13 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 3B       ; 17 / 32 ( 53 % ) ; 2.5V          ; --           ; 2.5V          ;
+; 4A       ; 4 / 68 ( 6 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 5A       ; 0 / 16 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 6B       ; 0 / 44 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 6A       ; 0 / 56 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
@@ -865,7 +863,7 @@ The pin-out file can be found in C:/Users/teylo/Documents/GitHub/Tetris_LED_Matr
 ; AD7      ; 37         ; 3A             ; ^AS_DATA0, ASDO, DATA0          ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
 ; AD8      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AD9      ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AD10     ; 57         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AD10     ; 57         ; 3B             ; enc2_b                          ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; On           ;
 ; AD11     ; 65         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AD12     ; 79         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AD13     ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -889,7 +887,7 @@ The pin-out file can be found in C:/Users/teylo/Documents/GitHub/Tetris_LED_Matr
 ; AE3      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AE4      ; 56         ; 3B             ; gnd[1]                          ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AE5      ;            ; 3A             ; VREFB3AN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
-; AE6      ; 51         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AE6      ; 51         ; 3A             ; enc2_a                          ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; On           ;
 ; AE7      ; 61         ; 3B             ; OE                              ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AE8      ; 64         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE9      ; 55         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -903,7 +901,7 @@ The pin-out file can be found in C:/Users/teylo/Documents/GitHub/Tetris_LED_Matr
 ; AE17     ; 111        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE18     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AE19     ; 121        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AE20     ; 129        ; 4A             ; reset                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AE20     ; 129        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE21     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AE22     ; 138        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE23     ; 151        ; 4A             ; enc1_b                          ; input  ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; On           ;
@@ -924,9 +922,9 @@ The pin-out file can be found in C:/Users/teylo/Documents/GitHub/Tetris_LED_Matr
 ; AF10     ; 71         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF11     ; 73         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF12     ;            ; 3B             ; VREFB3BN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
-; AF13     ; 87         ; 4A             ; enc2_a                          ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; On           ;
+; AF13     ; 87         ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF14     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AF15     ; 97         ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AF15     ; 97         ; 4A             ; reset                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AF16     ;            ; 4A             ; VREFB4AN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AF17     ; 105        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF18     ; 120        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -947,7 +945,7 @@ The pin-out file can be found in C:/Users/teylo/Documents/GitHub/Tetris_LED_Matr
 ; AG5      ; 80         ; 3B             ; RGB1[1]                         ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AG6      ; 70         ; 3B             ; led_addr[1]                     ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AG7      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AG8      ; 88         ; 4A             ; enc2_b                          ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; On           ;
+; AG8      ; 88         ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG9      ; 93         ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG10     ; 96         ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG11     ; 101        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -1476,10 +1474,10 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; gnd[3]      ; Incomplete set of assignments ;
 ; CLK         ; Incomplete set of assignments ;
 ; s1          ; Incomplete set of assignments ;
-; enc2_a      ; Incomplete set of assignments ;
-; enc2_b      ; Incomplete set of assignments ;
 ; enc1_a      ; Incomplete set of assignments ;
 ; enc1_b      ; Incomplete set of assignments ;
+; enc2_a      ; Incomplete set of assignments ;
+; enc2_b      ; Incomplete set of assignments ;
 ; reset       ; Missing location assignment   ;
 ; enc2_a      ; Missing location assignment   ;
 ; enc2_b      ; Missing location assignment   ;
@@ -1491,13 +1489,13 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+----------------------------------------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node          ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                        ; Entity Name          ; Library Name ;
 +-------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+----------------------------------------------------------------------------+----------------------+--------------+
-; |top_level_matrix                   ; 1005.5 (2.3)         ; 1217.0 (2.8)                     ; 214.5 (0.5)                                       ; 3.0 (0.0)                        ; 0.0 (0.0)            ; 1630 (5)            ; 1311 (3)                  ; 0 (0)         ; 0                 ; 0     ; 0          ; 23   ; 0            ; |top_level_matrix                                                          ; top_level_matrix     ; work         ;
-;    |encoder:encoder_1|              ; 5.5 (5.5)            ; 10.7 (10.7)                      ; 5.2 (5.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 11 (11)             ; 16 (16)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_level_matrix|encoder:encoder_1                                        ; encoder              ; work         ;
-;    |encoder:encoder_2|              ; 5.5 (5.5)            ; 10.5 (10.5)                      ; 5.0 (5.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 11 (11)             ; 17 (17)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_level_matrix|encoder:encoder_2                                        ; encoder              ; work         ;
-;    |etch_a_sketch:game_logic|       ; 394.8 (394.8)        ; 482.8 (482.8)                    ; 89.3 (89.3)                                       ; 1.3 (1.3)                        ; 0.0 (0.0)            ; 620 (620)           ; 591 (591)                 ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_level_matrix|etch_a_sketch:game_logic                                 ; etch_a_sketch        ; work         ;
-;    |led_matrix_ctrl_path:ctrl_path| ; 37.3 (37.3)          ; 39.9 (39.9)                      ; 2.6 (2.6)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 66 (66)             ; 53 (53)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_level_matrix|led_matrix_ctrl_path:ctrl_path                           ; led_matrix_ctrl_path ; work         ;
-;    |led_matrix_data_path:data_path| ; 560.0 (106.0)        ; 670.3 (115.9)                    ; 112.0 (10.5)                                      ; 1.7 (0.7)                        ; 0.0 (0.0)            ; 917 (187)           ; 631 (22)                  ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_level_matrix|led_matrix_data_path:data_path                           ; led_matrix_data_path ; work         ;
-;       |two_port_ram:color_matrix|   ; 454.0 (454.0)        ; 554.4 (554.4)                    ; 101.4 (101.4)                                     ; 1.0 (1.0)                        ; 0.0 (0.0)            ; 730 (730)           ; 609 (609)                 ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_level_matrix|led_matrix_data_path:data_path|two_port_ram:color_matrix ; two_port_ram         ; work         ;
+; |top_level_matrix                   ; 1005.5 (2.5)         ; 1215.0 (3.0)                     ; 210.0 (0.5)                                       ; 0.5 (0.0)                        ; 0.0 (0.0)            ; 1630 (5)            ; 1309 (3)                  ; 0 (0)         ; 0                 ; 0     ; 0          ; 23   ; 0            ; |top_level_matrix                                                          ; top_level_matrix     ; work         ;
+;    |encoder:encoder_1|              ; 5.5 (5.5)            ; 10.7 (10.7)                      ; 5.2 (5.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 11 (11)             ; 17 (17)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_level_matrix|encoder:encoder_1                                        ; encoder              ; work         ;
+;    |encoder:encoder_2|              ; 5.5 (5.5)            ; 11.6 (11.6)                      ; 6.1 (6.1)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 11 (11)             ; 18 (18)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_level_matrix|encoder:encoder_2                                        ; encoder              ; work         ;
+;    |etch_a_sketch:game_logic|       ; 394.8 (394.8)        ; 486.8 (486.8)                    ; 92.0 (92.0)                                       ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 620 (620)           ; 598 (598)                 ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_level_matrix|etch_a_sketch:game_logic                                 ; etch_a_sketch        ; work         ;
+;    |led_matrix_ctrl_path:ctrl_path| ; 37.0 (37.0)          ; 39.5 (39.5)                      ; 2.5 (2.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 66 (66)             ; 50 (50)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_level_matrix|led_matrix_ctrl_path:ctrl_path                           ; led_matrix_ctrl_path ; work         ;
+;    |led_matrix_data_path:data_path| ; 560.2 (105.3)        ; 663.4 (112.6)                    ; 103.8 (7.3)                                       ; 0.5 (0.0)                        ; 0.0 (0.0)            ; 917 (187)           ; 623 (23)                  ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_level_matrix|led_matrix_data_path:data_path                           ; led_matrix_data_path ; work         ;
+;       |two_port_ram:color_matrix|   ; 454.8 (454.8)        ; 550.8 (550.8)                    ; 96.5 (96.5)                                       ; 0.5 (0.5)                        ; 0.0 (0.0)            ; 730 (730)           ; 600 (600)                 ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_level_matrix|led_matrix_data_path:data_path|two_port_ram:color_matrix ; two_port_ram         ; work         ;
 +-------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+----------------------------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1524,49 +1522,49 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; gnd[1]      ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; gnd[2]      ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; gnd[3]      ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; CLK         ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; s1          ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; enc2_a      ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; enc2_b      ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; CLK         ; Input    ; -- ; (0)  ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; s1          ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; enc1_a      ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; enc1_b      ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; enc2_a      ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; enc2_b      ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +-------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
 
-+-----------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                              ;
-+-----------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                           ; Pad To Core Index ; Setting ;
-+-----------------------------------------------+-------------------+---------+
-; reset                                         ;                   ;         ;
-; CLK                                           ;                   ;         ;
-;      - counter[2]                             ; 0                 ; 0       ;
-; s1                                            ;                   ;         ;
-;      - s1~inputCLKENA0                        ; 0                 ; 0       ;
-; enc2_a                                        ;                   ;         ;
-;      - encoder:encoder_2|a_debounce[0]        ; 0                 ; 0       ;
-; enc2_b                                        ;                   ;         ;
-;      - encoder:encoder_2|b_debounce[0]~feeder ; 1                 ; 0       ;
-; enc1_a                                        ;                   ;         ;
-;      - encoder:encoder_1|a_debounce[0]        ; 1                 ; 0       ;
-; enc1_b                                        ;                   ;         ;
-;      - encoder:encoder_1|b_debounce[0]        ; 0                 ; 0       ;
-+-----------------------------------------------+-------------------+---------+
++----------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                       ;
++----------------------------------------+-------------------+---------+
+; Source Pin / Fanout                    ; Pad To Core Index ; Setting ;
++----------------------------------------+-------------------+---------+
+; reset                                  ;                   ;         ;
+; CLK                                    ;                   ;         ;
+;      - counter[2]                      ; 1                 ; 0       ;
+; s1                                     ;                   ;         ;
+;      - s1~inputCLKENA0                 ; 1                 ; 0       ;
+; enc1_a                                 ;                   ;         ;
+;      - encoder:encoder_1|a_debounce[0] ; 1                 ; 0       ;
+; enc1_b                                 ;                   ;         ;
+;      - encoder:encoder_1|b_debounce[0] ; 0                 ; 0       ;
+; enc2_a                                 ;                   ;         ;
+;      - encoder:encoder_2|a_debounce[0] ; 0                 ; 0       ;
+; enc2_b                                 ;                   ;         ;
+;      - encoder:encoder_2|b_debounce[0] ; 0                 ; 0       ;
++----------------------------------------+-------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                       ;
-+------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                                     ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; CLK                                      ; PIN_V11            ; 2       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; CLK                                      ; PIN_V11            ; 2       ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; counter[2]                               ; FF_X13_Y7_N44      ; 1310    ; Clock        ; no     ; --                   ; --               ; --                        ;
-; etch_a_sketch:game_logic|cursor_pos[7]~2 ; LABCELL_X22_Y8_N39 ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; led_matrix_ctrl_path:ctrl_path|CE        ; LABCELL_X10_Y6_N39 ; 70      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; led_matrix_ctrl_path:ctrl_path|WideOr7   ; LABCELL_X15_Y3_N0  ; 37      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; s1                                       ; PIN_AH23           ; 591     ; Async. clear ; yes    ; Global Clock         ; GCLK5            ; --                        ;
-+------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                         ;
++------------------------------------------+----------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                                     ; Location             ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++------------------------------------------+----------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; CLK                                      ; PIN_V11              ; 2       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; CLK                                      ; PIN_V11              ; 2       ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; counter[2]                               ; FF_X13_Y8_N56        ; 1308    ; Clock        ; no     ; --                   ; --               ; --                        ;
+; etch_a_sketch:game_logic|cursor_pos[7]~2 ; LABCELL_X18_Y4_N27   ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; led_matrix_ctrl_path:ctrl_path|CE        ; LABCELL_X10_Y9_N15   ; 66      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; led_matrix_ctrl_path:ctrl_path|WideOr7   ; MLABCELL_X14_Y12_N48 ; 35      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; s1                                       ; PIN_AH23             ; 598     ; Async. clear ; yes    ; Global Clock         ; GCLK0            ; --                        ;
++------------------------------------------+----------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +-------------------------------------------------------------------------------------------------+
@@ -1575,7 +1573,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------+----------+---------+----------------------+------------------+---------------------------+
 ; CLK  ; PIN_V11  ; 2       ; Global Clock         ; GCLK6            ; --                        ;
-; s1   ; PIN_AH23 ; 591     ; Global Clock         ; GCLK5            ; --                        ;
+; s1   ; PIN_AH23 ; 598     ; Global Clock         ; GCLK0            ; --                        ;
 +------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1584,7 +1582,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------+--------------------+
 ; Name       ; Fan-Out            ;
 +------------+--------------------+
-; counter[2] ; 1310               ;
+; counter[2] ; 1308               ;
 +------------+--------------------+
 
 
@@ -1593,14 +1591,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+-------------------------+
 ; Routing Resource Type                       ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Block interconnects                         ; 3,998 / 130,276 ( 3 % ) ;
-; C12 interconnects                           ; 41 / 6,848 ( < 1 % )    ;
-; C2 interconnects                            ; 1,016 / 51,436 ( 2 % )  ;
-; C4 interconnects                            ; 489 / 25,120 ( 2 % )    ;
+; Block interconnects                         ; 3,951 / 130,276 ( 3 % ) ;
+; C12 interconnects                           ; 42 / 6,848 ( < 1 % )    ;
+; C2 interconnects                            ; 932 / 51,436 ( 2 % )    ;
+; C4 interconnects                            ; 457 / 25,120 ( 2 % )    ;
 ; DQS bus muxes                               ; 0 / 19 ( 0 % )          ;
 ; DQS-18 I/O buses                            ; 0 / 19 ( 0 % )          ;
 ; DQS-9 I/O buses                             ; 0 / 19 ( 0 % )          ;
-; Direct links                                ; 507 / 130,276 ( < 1 % ) ;
+; Direct links                                ; 558 / 130,276 ( < 1 % ) ;
 ; Global clocks                               ; 2 / 16 ( 13 % )         ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )           ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )           ;
@@ -1656,12 +1654,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )           ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )          ;
 ; Horizontal periphery clocks                 ; 0 / 12 ( 0 % )          ;
-; Local interconnects                         ; 1,355 / 31,760 ( 4 % )  ;
+; Local interconnects                         ; 1,396 / 31,760 ( 4 % )  ;
 ; Quadrant clocks                             ; 0 / 72 ( 0 % )          ;
-; R14 interconnects                           ; 64 / 6,046 ( 1 % )      ;
-; R14/C12 interconnect drivers                ; 94 / 8,584 ( 1 % )      ;
-; R3 interconnects                            ; 1,560 / 56,712 ( 3 % )  ;
-; R6 interconnects                            ; 2,114 / 131,000 ( 2 % ) ;
+; R14 interconnects                           ; 61 / 6,046 ( 1 % )      ;
+; R14/C12 interconnect drivers                ; 91 / 8,584 ( 1 % )      ;
+; R3 interconnects                            ; 1,415 / 56,712 ( 2 % )  ;
+; R6 interconnects                            ; 1,988 / 131,000 ( 2 % ) ;
 ; Spine clocks                                ; 4 / 150 ( 3 % )         ;
 ; Wire stub REs                               ; 0 / 6,650 ( 0 % )       ;
 +---------------------------------------------+-------------------------+
@@ -1745,10 +1743,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; gnd[3]             ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; CLK                ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; s1                 ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; enc2_a             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; enc2_b             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; enc1_a             ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; enc1_b             ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; enc2_a             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; enc2_b             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
 
 
@@ -1800,8 +1798,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; counter[2]      ; counter[2]           ; 184.3             ;
-; CLK             ; counter[2]           ; 52.1              ;
+; counter[2]      ; counter[2]           ; 168.5             ;
+; CLK             ; counter[2]           ; 60.8              ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -1812,106 +1810,106 @@ This will disable optimization of problematic paths and expose them for further 
 +----------------------------------------------------------------------------+----------------------------------------------------------------------------+-------------------+
 ; Source Register                                                            ; Destination Register                                                       ; Delay Added in ns ;
 +----------------------------------------------------------------------------+----------------------------------------------------------------------------+-------------------+
-; counter[2]                                                                 ; counter[2]                                                                 ; 3.840             ;
-; counter[0]                                                                 ; counter[2]                                                                 ; 1.568             ;
-; counter[1]                                                                 ; counter[2]                                                                 ; 1.568             ;
-; led_matrix_ctrl_path:ctrl_path|state.DEAD                                  ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.974             ;
-; encoder:encoder_1|ccw_count[1]                                             ; encoder:encoder_1|ccw                                                      ; 0.932             ;
-; encoder:encoder_1|cw_count[1]                                              ; encoder:encoder_1|cw                                                       ; 0.908             ;
-; encoder:encoder_1|cw_count[0]                                              ; encoder:encoder_1|cw                                                       ; 0.887             ;
-; led_matrix_data_path:data_path|write_addr[8]                               ; led_matrix_data_path:data_path|write_data[0]                               ; 0.886             ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|address_b_pipe[6] ; led_matrix_data_path:data_path|two_port_ram:color_matrix|q_a_pipe[0]       ; 0.884             ;
-; encoder:encoder_2|cw_count[1]                                              ; encoder:encoder_2|cw                                                       ; 0.883             ;
-; encoder:encoder_1|prev_b                                                   ; encoder:encoder_1|cw                                                       ; 0.877             ;
-; encoder:encoder_1|b_stable                                                 ; encoder:encoder_1|cw                                                       ; 0.873             ;
-; encoder:encoder_2|cw_count[0]                                              ; encoder:encoder_2|cw                                                       ; 0.862             ;
-; encoder:encoder_2|prev_b                                                   ; encoder:encoder_2|cw                                                       ; 0.855             ;
-; encoder:encoder_1|a_stable                                                 ; encoder:encoder_1|cw                                                       ; 0.848             ;
-; led_matrix_data_path:data_path|write_addr[7]                               ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[363][0]       ; 0.845             ;
-; encoder:encoder_1|prev_a                                                   ; encoder:encoder_1|cw                                                       ; 0.843             ;
-; etch_a_sketch:game_logic|cursor_pos[3]                                     ; etch_a_sketch:game_logic|input_matrix[223][0]                              ; 0.831             ;
-; encoder:encoder_2|a_stable                                                 ; encoder:encoder_2|cw                                                       ; 0.827             ;
-; encoder:encoder_2|prev_a                                                   ; encoder:encoder_2|cw                                                       ; 0.817             ;
-; led_matrix_data_path:data_path|write_addr[6]                               ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[363][0]       ; 0.784             ;
-; led_matrix_data_path:data_path|write_addr[5]                               ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[487][0]       ; 0.768             ;
-; encoder:encoder_2|b_debounce[0]                                            ; encoder:encoder_2|b_debounce[1]                                            ; 0.763             ;
-; etch_a_sketch:game_logic|cursor_pos[6]                                     ; etch_a_sketch:game_logic|input_matrix[489][0]                              ; 0.714             ;
-; led_matrix_data_path:data_path|write_addr[0]                               ; led_matrix_data_path:data_path|write_data[0]                               ; 0.708             ;
-; encoder:encoder_1|b_debounce[2]                                            ; encoder:encoder_1|b_stable                                                 ; 0.701             ;
-; led_matrix_data_path:data_path|write_addr[4]                               ; led_matrix_data_path:data_path|write_data[0]                               ; 0.699             ;
-; encoder:encoder_1|b_debounce[1]                                            ; encoder:encoder_1|b_stable                                                 ; 0.697             ;
-; led_matrix_data_path:data_path|write_addr[3]                               ; led_matrix_data_path:data_path|write_data[0]                               ; 0.672             ;
-; etch_a_sketch:game_logic|cursor_pos[8]                                     ; etch_a_sketch:game_logic|input_matrix[379][0]                              ; 0.663             ;
-; led_matrix_data_path:data_path|write_addr[1]                               ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[187][0]       ; 0.659             ;
-; led_matrix_ctrl_path:ctrl_path|row_addr[0]                                 ; led_matrix_ctrl_path:ctrl_path|row_addr[1]                                 ; 0.653             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[5]                              ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.642             ;
-; led_matrix_data_path:data_path|addr[2]                                     ; led_matrix_data_path:data_path|two_port_ram:color_matrix|address_b_pipe[2] ; 0.623             ;
-; led_matrix_ctrl_path:ctrl_path|state.LATCH                                 ; led_matrix_ctrl_path:ctrl_path|state.OUTPUT                                ; 0.621             ;
-; led_matrix_ctrl_path:ctrl_path|row_addr[1]                                 ; led_matrix_ctrl_path:ctrl_path|row_addr[2]                                 ; 0.618             ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|address_b_pipe[0] ; led_matrix_data_path:data_path|two_port_ram:color_matrix|q_b_pipe[0]       ; 0.617             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[1]                              ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.614             ;
-; led_matrix_data_path:data_path|write_addr[2]                               ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[17][0]        ; 0.609             ;
-; led_matrix_data_path:data_path|addr[3]                                     ; led_matrix_data_path:data_path|two_port_ram:color_matrix|address_b_pipe[3] ; 0.609             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[6]                              ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.605             ;
-; led_matrix_ctrl_path:ctrl_path|state.DATA                                  ; led_matrix_data_path:data_path|write_data[0]                               ; 0.603             ;
-; encoder:encoder_1|a_debounce[1]                                            ; encoder:encoder_1|a_debounce[2]                                            ; 0.600             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[4]                              ; led_matrix_ctrl_path:ctrl_path|state.LATCH                                 ; 0.599             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[2]                              ; led_matrix_ctrl_path:ctrl_path|state.LATCH                                 ; 0.599             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[3]                              ; led_matrix_ctrl_path:ctrl_path|state.LATCH                                 ; 0.599             ;
-; encoder:encoder_1|a_debounce[0]                                            ; encoder:encoder_1|a_debounce[1]                                            ; 0.596             ;
-; encoder:encoder_2|a_debounce[0]                                            ; encoder:encoder_2|a_debounce[1]                                            ; 0.592             ;
-; led_matrix_ctrl_path:ctrl_path|state.PRE                                   ; led_matrix_data_path:data_path|write_data[0]                               ; 0.591             ;
-; encoder:encoder_2|a_debounce[1]                                            ; encoder:encoder_2|a_debounce[2]                                            ; 0.590             ;
-; etch_a_sketch:game_logic|cursor_pos[2]                                     ; etch_a_sketch:game_logic|input_matrix[223][0]                              ; 0.581             ;
-; etch_a_sketch:game_logic|cursor_pos[1]                                     ; etch_a_sketch:game_logic|input_matrix[223][0]                              ; 0.581             ;
-; etch_a_sketch:game_logic|cursor_pos[4]                                     ; etch_a_sketch:game_logic|input_matrix[223][0]                              ; 0.581             ;
-; etch_a_sketch:game_logic|cursor_pos[0]                                     ; etch_a_sketch:game_logic|input_matrix[223][0]                              ; 0.581             ;
-; etch_a_sketch:game_logic|cursor_pos[5]                                     ; etch_a_sketch:game_logic|input_matrix[223][0]                              ; 0.581             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[13]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.580             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[12]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.580             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[11]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.580             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[9]                              ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.580             ;
-; etch_a_sketch:game_logic|input_matrix[502][0]                              ; led_matrix_data_path:data_path|write_data[0]                               ; 0.563             ;
-; etch_a_sketch:game_logic|input_matrix[484][0]                              ; led_matrix_data_path:data_path|write_data[0]                               ; 0.561             ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[483][0]       ; led_matrix_data_path:data_path|two_port_ram:color_matrix|q_b_pipe[0]       ; 0.559             ;
-; encoder:encoder_1|a_debounce[2]                                            ; encoder:encoder_1|a_stable                                                 ; 0.539             ;
-; etch_a_sketch:game_logic|input_matrix[480][0]                              ; led_matrix_data_path:data_path|write_data[0]                               ; 0.534             ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|address_b_pipe[4] ; led_matrix_data_path:data_path|two_port_ram:color_matrix|q_b_pipe[0]       ; 0.534             ;
-; encoder:encoder_2|ccw_count[1]                                             ; encoder:encoder_2|ccw                                                      ; 0.529             ;
-; encoder:encoder_2|a_debounce[2]                                            ; encoder:encoder_2|a_stable                                                 ; 0.528             ;
-; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; led_matrix_ctrl_path:ctrl_path|state.DEADinc                               ; 0.524             ;
-; etch_a_sketch:game_logic|input_matrix[496][0]                              ; led_matrix_data_path:data_path|write_data[0]                               ; 0.514             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[31]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.514             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[30]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.514             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[28]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.514             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[29]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.514             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[27]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.514             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[26]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.514             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[25]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.514             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[24]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.514             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[23]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.514             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[22]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.514             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[20]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.514             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[19]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.514             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[18]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.514             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[17]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.514             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[16]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.514             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[15]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.514             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[14]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.514             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[21]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.514             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[8]                              ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.514             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[7]                              ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.514             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[0]                              ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.514             ;
-; led_matrix_ctrl_path:ctrl_path|cycle_count[10]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.514             ;
-; etch_a_sketch:game_logic|input_matrix[498][0]                              ; led_matrix_data_path:data_path|write_data[0]                               ; 0.513             ;
-; etch_a_sketch:game_logic|cursor_pos[7]                                     ; etch_a_sketch:game_logic|input_matrix[379][0]                              ; 0.511             ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|address_b_pipe[5] ; led_matrix_data_path:data_path|two_port_ram:color_matrix|q_b_pipe[0]       ; 0.498             ;
-; encoder:encoder_2|ccw_count[0]                                             ; encoder:encoder_2|ccw                                                      ; 0.498             ;
-; led_matrix_ctrl_path:ctrl_path|state.OUTPUT                                ; led_matrix_ctrl_path:ctrl_path|state.DEAD                                  ; 0.485             ;
-; encoder:encoder_2|b_debounce[2]                                            ; encoder:encoder_2|b_stable                                                 ; 0.470             ;
-; etch_a_sketch:game_logic|input_matrix[500][0]                              ; led_matrix_data_path:data_path|write_data[0]                               ; 0.423             ;
-; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[170][0]       ; led_matrix_data_path:data_path|two_port_ram:color_matrix|q_a_pipe[0]       ; 0.421             ;
-; etch_a_sketch:game_logic|input_matrix[494][0]                              ; etch_a_sketch:game_logic|input_matrix[494][0]                              ; 0.391             ;
+; counter[2]                                                                 ; counter[2]                                                                 ; 3.930             ;
+; counter[0]                                                                 ; counter[2]                                                                 ; 1.578             ;
+; counter[1]                                                                 ; counter[2]                                                                 ; 1.578             ;
+; encoder:encoder_1|cw_count[0]                                              ; encoder:encoder_1|cw                                                       ; 1.030             ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|address_b_pipe[4] ; led_matrix_data_path:data_path|two_port_ram:color_matrix|q_b_pipe[0]       ; 1.013             ;
+; encoder:encoder_2|cw_count[1]                                              ; encoder:encoder_2|cw                                                       ; 1.012             ;
+; encoder:encoder_2|ccw_count[0]                                             ; encoder:encoder_2|ccw                                                      ; 0.970             ;
+; led_matrix_ctrl_path:ctrl_path|state.POST                                  ; led_matrix_ctrl_path:ctrl_path|state.LATCH                                 ; 0.962             ;
+; led_matrix_ctrl_path:ctrl_path|state.DEAD                                  ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.955             ;
+; led_matrix_data_path:data_path|addr[1]                                     ; led_matrix_data_path:data_path|addr[2]                                     ; 0.945             ;
+; etch_a_sketch:game_logic|cursor_pos[0]                                     ; etch_a_sketch:game_logic|cursor_pos[8]                                     ; 0.945             ;
+; etch_a_sketch:game_logic|cursor_pos[7]                                     ; etch_a_sketch:game_logic|cursor_pos[8]                                     ; 0.939             ;
+; encoder:encoder_1|ccw_count[1]                                             ; encoder:encoder_1|ccw                                                      ; 0.927             ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|address_b_pipe[3] ; led_matrix_data_path:data_path|two_port_ram:color_matrix|q_b_pipe[0]       ; 0.908             ;
+; etch_a_sketch:game_logic|cursor_pos[8]                                     ; etch_a_sketch:game_logic|cursor_pos[8]                                     ; 0.883             ;
+; encoder:encoder_2|prev_b                                                   ; encoder:encoder_2|ccw                                                      ; 0.883             ;
+; led_matrix_data_path:data_path|write_addr[8]                               ; led_matrix_data_path:data_path|write_data[0]                               ; 0.881             ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|address_b_pipe[7] ; led_matrix_data_path:data_path|two_port_ram:color_matrix|q_a_pipe[0]       ; 0.878             ;
+; led_matrix_data_path:data_path|write_addr[2]                               ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[326][0]       ; 0.872             ;
+; encoder:encoder_1|prev_b                                                   ; encoder:encoder_1|ccw                                                      ; 0.864             ;
+; encoder:encoder_2|b_debounce[1]                                            ; encoder:encoder_2|b_debounce[2]                                            ; 0.858             ;
+; encoder:encoder_1|prev_a                                                   ; encoder:encoder_1|ccw                                                      ; 0.840             ;
+; encoder:encoder_1|a_stable                                                 ; encoder:encoder_1|ccw                                                      ; 0.810             ;
+; encoder:encoder_2|a_stable                                                 ; encoder:encoder_2|prev_a                                                   ; 0.805             ;
+; encoder:encoder_2|prev_a                                                   ; encoder:encoder_2|ccw                                                      ; 0.774             ;
+; encoder:encoder_1|ccw                                                      ; etch_a_sketch:game_logic|cursor_pos[8]                                     ; 0.773             ;
+; led_matrix_data_path:data_path|write_addr[1]                               ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[471][0]       ; 0.759             ;
+; led_matrix_data_path:data_path|write_addr[7]                               ; led_matrix_data_path:data_path|write_data[0]                               ; 0.751             ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|address_b_pipe[0] ; led_matrix_data_path:data_path|two_port_ram:color_matrix|q_b_pipe[0]       ; 0.749             ;
+; led_matrix_data_path:data_path|write_addr[3]                               ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[261][0]       ; 0.744             ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|address_b_pipe[5] ; led_matrix_data_path:data_path|two_port_ram:color_matrix|q_a_pipe[0]       ; 0.739             ;
+; led_matrix_data_path:data_path|write_addr[4]                               ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[326][0]       ; 0.721             ;
+; encoder:encoder_2|a_debounce[2]                                            ; encoder:encoder_2|a_stable                                                 ; 0.719             ;
+; encoder:encoder_2|a_debounce[1]                                            ; encoder:encoder_2|a_stable                                                 ; 0.715             ;
+; led_matrix_data_path:data_path|write_addr[0]                               ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[28][0]        ; 0.708             ;
+; etch_a_sketch:game_logic|cursor_pos[6]                                     ; etch_a_sketch:game_logic|cursor_pos[8]                                     ; 0.707             ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|address_b_pipe[1] ; led_matrix_data_path:data_path|two_port_ram:color_matrix|q_b_pipe[0]       ; 0.697             ;
+; encoder:encoder_1|b_debounce[0]                                            ; encoder:encoder_1|b_debounce[1]                                            ; 0.686             ;
+; led_matrix_data_path:data_path|addr[6]                                     ; led_matrix_data_path:data_path|two_port_ram:color_matrix|address_b_pipe[6] ; 0.683             ;
+; led_matrix_ctrl_path:ctrl_path|state.DATA                                  ; led_matrix_data_path:data_path|addr[0]                                     ; 0.674             ;
+; encoder:encoder_2|b_debounce[0]                                            ; encoder:encoder_2|b_stable                                                 ; 0.674             ;
+; encoder:encoder_2|a_debounce[0]                                            ; encoder:encoder_2|a_debounce[1]                                            ; 0.667             ;
+; led_matrix_ctrl_path:ctrl_path|state.PRE                                   ; led_matrix_data_path:data_path|addr[0]                                     ; 0.666             ;
+; encoder:encoder_2|ccw_count[1]                                             ; encoder:encoder_2|ccw                                                      ; 0.625             ;
+; encoder:encoder_2|b_stable                                                 ; encoder:encoder_2|ccw_count[1]                                             ; 0.619             ;
+; encoder:encoder_2|b_debounce[2]                                            ; encoder:encoder_2|b_stable                                                 ; 0.604             ;
+; encoder:encoder_1|a_debounce[1]                                            ; encoder:encoder_1|a_debounce[2]                                            ; 0.590             ;
+; led_matrix_ctrl_path:ctrl_path|state.LATCH                                 ; led_matrix_ctrl_path:ctrl_path|state.OUTPUT                                ; 0.540             ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|address_b_pipe[2] ; led_matrix_data_path:data_path|two_port_ram:color_matrix|q_b_pipe[0]       ; 0.523             ;
+; encoder:encoder_2|cw                                                       ; etch_a_sketch:game_logic|cursor_pos[8]                                     ; 0.518             ;
+; led_matrix_ctrl_path:ctrl_path|cycle_count[5]                              ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.511             ;
+; led_matrix_ctrl_path:ctrl_path|state.OUTPUT                                ; led_matrix_ctrl_path:ctrl_path|state.DEAD                                  ; 0.504             ;
+; etch_a_sketch:game_logic|cursor_pos[2]                                     ; etch_a_sketch:game_logic|input_matrix[342][0]                              ; 0.503             ;
+; etch_a_sketch:game_logic|cursor_pos[3]                                     ; etch_a_sketch:game_logic|cursor_pos[8]                                     ; 0.503             ;
+; etch_a_sketch:game_logic|cursor_pos[1]                                     ; etch_a_sketch:game_logic|cursor_pos[8]                                     ; 0.503             ;
+; etch_a_sketch:game_logic|cursor_pos[4]                                     ; etch_a_sketch:game_logic|cursor_pos[8]                                     ; 0.503             ;
+; led_matrix_ctrl_path:ctrl_path|cycle_count[13]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.497             ;
+; led_matrix_ctrl_path:ctrl_path|cycle_count[12]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.497             ;
+; led_matrix_ctrl_path:ctrl_path|cycle_count[11]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.497             ;
+; led_matrix_ctrl_path:ctrl_path|cycle_count[6]                              ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.497             ;
+; led_matrix_ctrl_path:ctrl_path|cycle_count[9]                              ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.497             ;
+; led_matrix_ctrl_path:ctrl_path|cycle_count[1]                              ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.497             ;
+; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; led_matrix_ctrl_path:ctrl_path|state.DEADinc                               ; 0.497             ;
+; etch_a_sketch:game_logic|cursor_pos[5]                                     ; etch_a_sketch:game_logic|cursor_pos[8]                                     ; 0.495             ;
+; encoder:encoder_2|ccw                                                      ; etch_a_sketch:game_logic|cursor_pos[8]                                     ; 0.495             ;
+; led_matrix_data_path:data_path|addr[5]                                     ; led_matrix_data_path:data_path|two_port_ram:color_matrix|address_b_pipe[5] ; 0.491             ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[107][0]       ; led_matrix_data_path:data_path|two_port_ram:color_matrix|q_a_pipe[0]       ; 0.490             ;
+; led_matrix_ctrl_path:ctrl_path|row_addr[0]                                 ; led_matrix_ctrl_path:ctrl_path|row_addr[2]                                 ; 0.483             ;
+; encoder:encoder_1|cw_count[1]                                              ; encoder:encoder_1|cw                                                       ; 0.478             ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[140][0]       ; led_matrix_data_path:data_path|two_port_ram:color_matrix|q_a_pipe[0]       ; 0.477             ;
+; led_matrix_data_path:data_path|addr[2]                                     ; led_matrix_data_path:data_path|addr[2]                                     ; 0.468             ;
+; led_matrix_data_path:data_path|addr[0]                                     ; led_matrix_data_path:data_path|addr[2]                                     ; 0.468             ;
+; led_matrix_ctrl_path:ctrl_path|row_addr[1]                                 ; led_matrix_ctrl_path:ctrl_path|row_addr[2]                                 ; 0.451             ;
+; led_matrix_data_path:data_path|write_addr[5]                               ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[73][0]        ; 0.440             ;
+; led_matrix_data_path:data_path|addr[4]                                     ; led_matrix_data_path:data_path|two_port_ram:color_matrix|address_b_pipe[4] ; 0.421             ;
+; led_matrix_ctrl_path:ctrl_path|cycle_count[4]                              ; led_matrix_ctrl_path:ctrl_path|state.LATCH                                 ; 0.410             ;
+; led_matrix_ctrl_path:ctrl_path|cycle_count[2]                              ; led_matrix_ctrl_path:ctrl_path|state.LATCH                                 ; 0.410             ;
+; led_matrix_ctrl_path:ctrl_path|cycle_count[3]                              ; led_matrix_ctrl_path:ctrl_path|state.LATCH                                 ; 0.410             ;
+; encoder:encoder_1|b_debounce[2]                                            ; encoder:encoder_1|b_stable                                                 ; 0.409             ;
+; led_matrix_data_path:data_path|write_addr[6]                               ; led_matrix_data_path:data_path|two_port_ram:color_matrix|mem[73][0]        ; 0.384             ;
+; etch_a_sketch:game_logic|input_matrix[342][0]                              ; etch_a_sketch:game_logic|input_matrix[342][0]                              ; 0.379             ;
+; led_matrix_data_path:data_path|two_port_ram:color_matrix|address_b_pipe[6] ; led_matrix_data_path:data_path|two_port_ram:color_matrix|q_a_pipe[0]       ; 0.377             ;
+; led_matrix_ctrl_path:ctrl_path|cycle_count[31]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.360             ;
+; led_matrix_ctrl_path:ctrl_path|cycle_count[30]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.360             ;
+; led_matrix_ctrl_path:ctrl_path|cycle_count[28]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.360             ;
+; led_matrix_ctrl_path:ctrl_path|cycle_count[29]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.360             ;
+; led_matrix_ctrl_path:ctrl_path|cycle_count[27]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.360             ;
+; led_matrix_ctrl_path:ctrl_path|cycle_count[26]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.360             ;
+; led_matrix_ctrl_path:ctrl_path|cycle_count[25]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.360             ;
+; led_matrix_ctrl_path:ctrl_path|cycle_count[24]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.360             ;
+; led_matrix_ctrl_path:ctrl_path|cycle_count[23]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.360             ;
+; led_matrix_ctrl_path:ctrl_path|cycle_count[22]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.360             ;
+; led_matrix_ctrl_path:ctrl_path|cycle_count[20]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.360             ;
+; led_matrix_ctrl_path:ctrl_path|cycle_count[19]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.360             ;
+; led_matrix_ctrl_path:ctrl_path|cycle_count[18]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.360             ;
+; led_matrix_ctrl_path:ctrl_path|cycle_count[17]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.360             ;
+; led_matrix_ctrl_path:ctrl_path|cycle_count[16]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.360             ;
+; led_matrix_ctrl_path:ctrl_path|cycle_count[15]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.360             ;
+; led_matrix_ctrl_path:ctrl_path|cycle_count[14]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.360             ;
+; led_matrix_ctrl_path:ctrl_path|cycle_count[21]                             ; led_matrix_ctrl_path:ctrl_path|state.INC                                   ; 0.360             ;
 +----------------------------------------------------------------------------+----------------------------------------------------------------------------+-------------------+
 Note: This table only shows the top 100 path(s) that have the largest delay added for hold.
 
@@ -2067,32 +2065,32 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "red" is assigned to location or region, but does not exist in design
     Warning (15706): Node "s2" is assigned to location or region, but does not exist in design
     Warning (15706): Node "spkr" is assigned to location or region, but does not exist in design
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:05
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:08
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:01:07
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:01:18
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:04
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 1% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 15% of the available device resources in the region that extends from location X11_Y0 to location X22_Y11
+    Info (170196): Router estimated peak interconnect usage is 14% of the available device resources in the region that extends from location X11_Y0 to location X22_Y11
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:08
-Info (11888): Total time spent on timing analysis during the Fitter is 5.58 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:11
+Info (11888): Total time spent on timing analysis during the Fitter is 6.74 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:08
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:11
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/Quartus/output_files/top_level_matrix.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 130 warnings
-    Info: Peak virtual memory: 6884 megabytes
-    Info: Processing ended: Thu Mar 27 12:09:01 2025
-    Info: Elapsed time: 00:02:36
-    Info: Total CPU time (on all processors): 00:01:52
+    Info: Peak virtual memory: 6960 megabytes
+    Info: Processing ended: Thu Mar 27 20:20:40 2025
+    Info: Elapsed time: 00:03:12
+    Info: Total CPU time (on all processors): 00:03:04
 
 
 +----------------------------+

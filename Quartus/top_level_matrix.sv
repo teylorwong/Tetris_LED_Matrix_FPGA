@@ -15,10 +15,11 @@ module top_level_matrix (
 	output logic [3:0] gnd,							//Grounds to LED Matrix
 
 	(* altera_attribute = "-name WEAK_PULL_UP_RESISTOR ON" *) 
-	input logic enc1_a, enc1_b, //Encoder 1 pins
+	input logic enc1_a, enc1_b, 					//Encoder 1 pins
 	(* altera_attribute = "-name WEAK_PULL_UP_RESISTOR ON" *) 
-	input logic enc2_a, enc2_b, //Encoder 2 pins
-	input logic s1          // Pushbuttons (active low)
+	input logic enc2_a, enc2_b, 					//Encoder 2 pins
+	input logic s1          						// Pushbutton 1 (active low)
+	input logic s2		  							// Pushbutton 2 (active low
 );
 	
 logic CE;												//internal count enable signal
@@ -126,6 +127,7 @@ etch_a_sketch game_logic(
 	.enc1_ccw(enc1_ccw),
 	.enc2_cw(enc2_cw),
 	.enc2_ccw(enc2_ccw),
+	.colour_sw(s2),
 	.input_matrix(input_matrix)
 );
 
