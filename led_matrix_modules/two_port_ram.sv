@@ -1,5 +1,6 @@
 //Read Write RAM. 
-//Author: Jake Forsyth, Adapted from Joseph Primmer https://uselessrobots.com/2021/01/12/adafruit-led-matrix-control-w-verilog-part-2/
+//Author: Jake Forsyth, Adapted from Joseph Primmer's static two port ram 
+//Adapted to system verilog and modified for dynamic matrix updating. 
 //Commenced: Feb 2025
 
 module two_port_ram(
@@ -17,8 +18,6 @@ module two_port_ram(
 	output logic [2:0] q_b
 	);
 	
-	logic [8:0] address_a_pipe;
-	logic [8:0] address_b_pipe;
 	logic [2:0] mem [511:0];
 	logic [2:0] q_a_pipe;
 	logic [2:0] q_b_pipe;
@@ -26,8 +25,6 @@ module two_port_ram(
 	
 	always_ff @(negedge clock) begin
 		if(reset) begin
-			address_a_pipe <= 0;
-			address_b_pipe <= 0;
 			q_a_pipe <= 0;
 			q_b_pipe <= 0;
 			for(i = 0; i < 512; i = i + 1) begin
@@ -41,10 +38,11 @@ module two_port_ram(
 		end
 		////////////////////////
 		else begin
-			address_a_pipe <= address_a;
-			address_b_pipe <= address_b;
-			q_a_pipe <= mem[address_a_pipe];
-			q_b_pipe <= mem[address_b_pipe];
+			//off by one for some reason? maybe try this
+			//q_a_pipe <= mem[address_a_pipe];
+			//q_b_pipe <= mem[address_b_pipe];
+			q_a_pipe <= mem[address_a];//this fixed off by one, piping isnt real. 
+			q_b_pipe <= mem[address_b];
 		end
 	end
 	

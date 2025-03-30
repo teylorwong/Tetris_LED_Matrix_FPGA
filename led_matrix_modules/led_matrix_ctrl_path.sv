@@ -1,6 +1,6 @@
 //Matrix Controller State Machine
-//Author:Joseph Primmer https://uselessrobots.com/2021/01/12/adafruit-led-matrix-control-w-verilog-part-2/
-//Adapted to system verilog standards by Jake Forsyth
+//Adapted from Joeseph Primmer's static matrix display state machine. uselessrobots.org
+//Adapted to system verilog and dynamic matrix updating by Jake Forsyth
 //Commenced: Feb 2025
 module led_matrix_ctrl_path(
 input logic CLK,
