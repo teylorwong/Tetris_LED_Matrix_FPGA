@@ -51,6 +51,8 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -entity top_level -section_id Top
 set_location_assignment PIN_AC22 -to enc1_a
 set_location_assignment PIN_AE23 -to enc1_b
+set_location_assignment PIN_AH27 -to enc2_a
+set_location_assignment PIN_AG28 -to enc2_b
 set_location_assignment PIN_AF11 -to point
 set_location_assignment PIN_Y15 -to lcd_cs
 set_location_assignment PIN_AA15 -to lcd_sda
