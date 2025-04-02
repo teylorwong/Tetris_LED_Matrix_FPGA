@@ -1,5 +1,6 @@
 //Matrix Data Path
-//Author: Jake Forsyth, Adapted from Joseph Primmer https://uselessrobots.com/2021/01/12/adafruit-led-matrix-control-w-verilog-part-2/
+//Author: Jake Forsyth, Adapted from Joseph Primmer's static verilog module
+//Adabpted to system verilog and dynanmic matrix updating. 
 //Commenced: Feb 2025
 
 module led_matrix_data_path(
@@ -14,16 +15,30 @@ module led_matrix_data_path(
 	logic  [7:0] addr;
 	/////////////////////////////////////////////
 	logic [8:0] write_addr;
-	logic WE;
+	logic WE = 0;
 	logic [2:0] write_data;
 	assign WE = ~CE;
-	/////////////////////////////////////////////
+	 
+   logic WE_delayed;  // New delayed write enable signal
+	    // Add a 1-cycle delay to WE
+    always_ff @(posedge CLK) begin
+        WE_delayed <= WE;
+    end
+	 //////////////////////////////////////////////////////////////////////////
+//	 
+//	 logic CE_delayed;
+//	 always_ff @(posedge CLK) begin
+//			CE_delayed <= CE;
+//	 end
 
+	////////////////////////////////////////////
 	always_ff @(posedge CLK, posedge RESET) begin
 		if(RESET) begin
 			addr <= 0;
 		end
-		else if(CE) begin
+		else if(CE) begin //else if (CE || CE_delayed) begin
+//			if ((write_addr - 30) % 32 == 0) addr = addr + 1;
+//			else
 			addr <= addr + 8'b1;
 		end
 		else begin
@@ -35,8 +50,9 @@ module led_matrix_data_path(
 		if (RESET) begin
 			write_addr <= 0;
 		end
-		else if(WE) begin
+		else if((WE || WE_delayed)) begin/////////else if(WE) begin
 			write_data <= input_matrix[write_addr];
+			//if ((write_addr - 31) % 32 == 0) write_data <= input_matrix[write_addr + 1];//please god
 			write_addr <= write_addr + 1;
 		end
 	   else begin

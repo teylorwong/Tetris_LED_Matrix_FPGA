@@ -1,0 +1,18 @@
+
+State Machine - |top_level_matrix|etch_a_sketch:game_logic|draw_colour
+Name draw_colour.100 draw_colour.010 draw_colour.001 
+draw_colour.100 0 0 0 
+draw_colour.010 1 1 0 
+draw_colour.001 1 0 1 
+
+State Machine - |top_level_matrix|led_matrix_ctrl_path:ctrl_path|state
+Name state.INC state.DEAD state.OUTPUT state.LATCH state.POST state.DATA state.PRE state.INIT state.DEADinc 
+state.INIT 0 0 0 0 0 0 0 0 0 
+state.PRE 0 0 0 0 0 0 1 1 0 
+state.DATA 0 0 0 0 0 1 0 1 0 
+state.POST 0 0 0 0 1 0 0 1 0 
+state.LATCH 0 0 0 1 0 0 0 1 0 
+state.OUTPUT 0 0 1 0 0 0 0 1 0 
+state.DEAD 0 1 0 0 0 0 0 1 0 
+state.INC 1 0 0 0 0 0 0 1 0 
+state.DEADinc 0 0 0 0 0 0 0 1 1 

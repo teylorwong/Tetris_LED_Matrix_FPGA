@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'counter[2]'
+Slack : -6.526
+TNS   : -11546.791
+
+Type  : Slow 1100mV 85C Model Setup 'CLK'
+Slack : -4.033
+TNS   : -4.877
+
+Type  : Slow 1100mV 85C Model Hold 'counter[2]'
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'CLK'
+Slack : 0.413
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLK'
+Slack : -0.403
+TNS   : -1.819
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'counter[2]'
+Slack : -0.394
+TNS   : -1729.287
+
+Type  : Slow 1100mV 0C Model Setup 'counter[2]'
+Slack : -6.301
+TNS   : -11099.945
+
+Type  : Slow 1100mV 0C Model Setup 'CLK'
+Slack : -3.956
+TNS   : -4.909
+
+Type  : Slow 1100mV 0C Model Hold 'counter[2]'
+Slack : 0.374
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'CLK'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -0.410
+TNS   : -1.926
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'counter[2]'
+Slack : -0.394
+TNS   : -1756.375
+
+Type  : Fast 1100mV 85C Model Setup 'counter[2]'
+Slack : -3.939
+TNS   : -6151.793
+
+Type  : Fast 1100mV 85C Model Setup 'CLK'
+Slack : -2.909
+TNS   : -2.909
+
+Type  : Fast 1100mV 85C Model Hold 'counter[2]'
+Slack : 0.176
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'CLK'
+Slack : 0.209
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLK'
+Slack : -0.434
+TNS   : -0.746
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'counter[2]'
+Slack : 0.049
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'counter[2]'
+Slack : -3.345
+TNS   : -5317.474
+
+Type  : Fast 1100mV 0C Model Setup 'CLK'
+Slack : -2.484
+TNS   : -2.484
+
+Type  : Fast 1100mV 0C Model Hold 'counter[2]'
+Slack : 0.167
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'CLK'
+Slack : 0.201
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -0.417
+TNS   : -0.710
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'counter[2]'
+Slack : 0.094
+TNS   : 0.000
+
+------------------------------------------------------------

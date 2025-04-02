@@ -11,7 +11,9 @@ module etch_a_sketch (
     output logic [2:0] input_matrix [511:0] // 32x16 LED matrix data
 );
 
-parameter SHAKE_THRESHOLD = 69;    // I have no idea, change this l8r when testing
+parameter SHAKE_THRESHOLD = 10;    // I have no idea, change this l8r when testing
+parameter SHAKE_COUNT_MAX = 4;   // Number of significant shakes needed to reset
+logic [2:0] shake_counter;  // Counts how many times a shake occurs
 logic [8:0] cursor_pos; // 0-511 (32*16)
 logic [2:0] draw_colour;
 logic prev_colour_sw;
@@ -23,15 +25,27 @@ always_ff @(posedge clk or negedge reset_n) begin
         draw_colour <= 3'b100; // Default to Red
         prev_colour_sw <= 0;
         prev_adc_result <= 0;
+        shake_counter <= 0; // Reset shake counter
         for (int i = 0; i < 512; i++) begin
             input_matrix[i] <= 3'b000; // Clear screen
         end
     end else begin
-        // Shake detection
+        // Shake detection (track multiple rapid changes)
         if ( (adc_result > prev_adc_result + SHAKE_THRESHOLD) || 
              (adc_result < prev_adc_result - SHAKE_THRESHOLD) ) begin
-            for (int i = 0; i < 512; i++) begin
-                input_matrix[i] <= 3'b000; // Clear screen
+            if (shake_counter < SHAKE_COUNT_MAX) begin
+                shake_counter <= shake_counter + 1;
+            end else begin
+                // Reset screen when enough shakes happen
+                for (int i = 0; i < 512; i++) begin
+                    input_matrix[i] <= 3'b000; // Clear screen
+                end
+                shake_counter <= 0; // Reset shake counter
+            end
+        end else begin
+            // If no significant shake detected, decay counter
+            if (shake_counter > 0) begin
+                shake_counter <= shake_counter - 1;
             end
         end
         prev_adc_result <= adc_result;
@@ -66,5 +80,6 @@ always_ff @(posedge clk or negedge reset_n) begin
         input_matrix[cursor_pos] <= draw_colour;
     end
 end
+
 
 endmodule

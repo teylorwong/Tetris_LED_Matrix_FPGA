@@ -1,0 +1,1 @@
+Info (10281): Verilog HDL Declaration information at top_level_matrix.sv(7): object "reset" differs only in case from object "RESET" in the same scope File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/Quartus2/top_level_matrix.sv Line: 7

@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Thu Mar 27 20:17:26 2025
+Analysis & Synthesis Status : Successful - Wed Apr 02 12:29:33 2025
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : top_level_matrix
 Top-level Entity Name : top_level_matrix
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 1140
-Total pins : 23
+Total registers : 3245
+Total pins : 28
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0
