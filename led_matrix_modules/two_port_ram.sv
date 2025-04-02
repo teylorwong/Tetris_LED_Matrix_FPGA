@@ -35,6 +35,7 @@ module two_port_ram(
 		///////////////////////
 		else if (write_enable) begin
 			mem[write_address] <= write_data; //write new data when not outputting. 
+			//if ((write_address - 31) % 32 == 0) mem[write_address] <= input_matrix[write_address];
 		end
 		////////////////////////
 		else begin
@@ -43,6 +44,7 @@ module two_port_ram(
 			//q_b_pipe <= mem[address_b_pipe];
 			q_a_pipe <= mem[address_a];//this fixed off by one, piping isnt real. 
 			q_b_pipe <= mem[address_b];
+
 		end
 	end
 	

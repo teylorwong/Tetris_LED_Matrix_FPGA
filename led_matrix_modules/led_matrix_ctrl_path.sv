@@ -1,6 +1,6 @@
 //Matrix Controller State Machine
-//Adapted from Joeseph Primmer's static matrix display state machine. uselessrobots.org
-//Adapted to system verilog and dynamic matrix updating by Jake Forsyth
+//Joeseph Primmer's static matrix display state machine.
+//Adapted to system verilog by Jake Forsyth
 //Commenced: Feb 2025
 module led_matrix_ctrl_path(
 input logic CLK,

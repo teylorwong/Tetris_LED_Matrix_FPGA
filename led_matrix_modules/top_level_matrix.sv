@@ -5,7 +5,7 @@
 module top_level_matrix (
 	input logic CLK, 									//clk from deonano
 	input logic reset, 								//reset signal
-// input logic [2:0] input_matrix [511:0], 	//////////////////////////////////////////Input array from future Tetris Module
+// input logic [2:0] input_matrix [511:0], 	//////////////////////////////////////////Input array from future
 	output logic clk_out, 							//clk out to LED Matrix
 	output logic [2:0] RGB0,						//Colour Bits for first half of matrix
 	output logic [2:0] RGB1,						//Colour Bits for second half of matrix
