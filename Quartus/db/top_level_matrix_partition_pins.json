@@ -76,10 +76,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "ADC_SDO",
-					"strict" : false
-				},
-				{
 					"name" : "enc1_a",
 					"strict" : false
 				},
@@ -93,6 +89,10 @@
 				},
 				{
 					"name" : "enc2_b",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_SDO",
 					"strict" : false
 				}
 			]

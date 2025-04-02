@@ -3,147 +3,147 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'counter[2]'
-Slack : -8.789
-TNS   : -18964.692
+Slack : -7.005
+TNS   : -13472.583
 
 Type  : Slow 1100mV 85C Model Setup 'CLK'
-Slack : -4.063
-TNS   : -12.038
+Slack : -4.168
+TNS   : -13.723
 
 Type  : Slow 1100mV 85C Model Setup 'clk_div_count[5]'
-Slack : -2.823
-TNS   : -86.326
+Slack : -2.240
+TNS   : -71.998
 
 Type  : Slow 1100mV 85C Model Hold 'clk_div_count[5]'
-Slack : 0.200
+Slack : 0.152
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'counter[2]'
-Slack : 0.370
+Slack : 0.357
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'CLK'
-Slack : 0.378
+Slack : 0.510
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'counter[2]'
 Slack : -0.394
-TNS   : -1729.513
+TNS   : -1769.766
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk_div_count[5]'
 Slack : -0.394
-TNS   : -26.024
+TNS   : -21.941
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLK'
 Slack : -0.394
-TNS   : -4.364
+TNS   : -4.507
 
 Type  : Slow 1100mV 0C Model Setup 'counter[2]'
-Slack : -8.503
-TNS   : -18356.257
+Slack : -6.803
+TNS   : -12885.984
 
 Type  : Slow 1100mV 0C Model Setup 'CLK'
-Slack : -4.240
-TNS   : -12.686
+Slack : -4.288
+TNS   : -14.384
 
 Type  : Slow 1100mV 0C Model Setup 'clk_div_count[5]'
-Slack : -2.697
-TNS   : -82.650
+Slack : -2.151
+TNS   : -69.314
 
 Type  : Slow 1100mV 0C Model Hold 'clk_div_count[5]'
-Slack : 0.211
+Slack : 0.222
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'counter[2]'
-Slack : 0.383
+Slack : 0.374
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'CLK'
-Slack : 0.388
+Slack : 0.522
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'counter[2]'
 Slack : -0.394
-TNS   : -1801.637
+TNS   : -1785.073
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk_div_count[5]'
 Slack : -0.394
-TNS   : -25.008
+TNS   : -20.977
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLK'
 Slack : -0.394
-TNS   : -4.702
+TNS   : -4.653
 
 Type  : Fast 1100mV 85C Model Setup 'counter[2]'
-Slack : -5.276
-TNS   : -10846.615
+Slack : -4.557
+TNS   : -7748.742
 
 Type  : Fast 1100mV 85C Model Setup 'CLK'
-Slack : -2.628
-TNS   : -5.442
+Slack : -2.648
+TNS   : -6.152
 
 Type  : Fast 1100mV 85C Model Setup 'clk_div_count[5]'
-Slack : -1.568
-TNS   : -43.758
+Slack : -1.296
+TNS   : -34.977
 
 Type  : Fast 1100mV 85C Model Hold 'clk_div_count[5]'
-Slack : 0.064
+Slack : 0.116
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'counter[2]'
-Slack : 0.179
+Slack : 0.178
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'CLK'
-Slack : 0.183
+Slack : 0.233
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLK'
-Slack : -0.318
-TNS   : -1.306
+Slack : -0.355
+TNS   : -1.423
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk_div_count[5]'
-Slack : -0.084
-TNS   : -2.155
+Slack : 0.008
+TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'counter[2]'
-Slack : 0.087
+Slack : 0.034
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'counter[2]'
-Slack : -4.586
-TNS   : -9501.669
+Slack : -3.918
+TNS   : -6627.929
 
 Type  : Fast 1100mV 0C Model Setup 'CLK'
-Slack : -2.272
-TNS   : -4.672
+Slack : -2.270
+TNS   : -5.247
 
 Type  : Fast 1100mV 0C Model Setup 'clk_div_count[5]'
-Slack : -1.339
-TNS   : -37.334
+Slack : -1.149
+TNS   : -29.964
 
 Type  : Fast 1100mV 0C Model Hold 'clk_div_count[5]'
-Slack : 0.089
+Slack : 0.127
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'counter[2]'
-Slack : 0.170
+Slack : 0.168
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'CLK'
-Slack : 0.175
+Slack : 0.224
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLK'
-Slack : -0.330
-TNS   : -1.318
+Slack : -0.335
+TNS   : -1.351
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk_div_count[5]'
-Slack : -0.044
-TNS   : -0.618
+Slack : 0.018
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'counter[2]'
-Slack : 0.126
+Slack : 0.076
 TNS   : 0.000
 
 ------------------------------------------------------------
