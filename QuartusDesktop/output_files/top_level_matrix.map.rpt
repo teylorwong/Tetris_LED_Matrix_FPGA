@@ -1,0 +1,1095 @@
+Analysis & Synthesis report for top_level_matrix
+Thu Apr 03 17:51:39 2025
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |top_level_matrix|adcinterface:adcinterface_0|state
+  9. State Machine - |top_level_matrix|etch_a_sketch:game_logic|draw_colour
+ 10. State Machine - |top_level_matrix|led_matrix_ctrl_path:ctrl_path|state
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for Top-level Entity: |top_level_matrix
+ 16. Parameter Settings for User Entity Instance: led_matrix_ctrl_path:ctrl_path
+ 17. Parameter Settings for User Entity Instance: etch_a_sketch:game_logic
+ 18. Port Connectivity Checks: "adcinterface:adcinterface_0"
+ 19. Port Connectivity Checks: "led_matrix_ctrl_path:ctrl_path"
+ 20. Port Connectivity Checks: "led_matrix_data_path:data_path|two_port_ram:color_matrix"
+ 21. Port Connectivity Checks: "led_matrix_data_path:data_path"
+ 22. Post-Synthesis Netlist Statistics for Top Partition
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
+ 25. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Apr 03 17:51:39 2025       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; top_level_matrix                            ;
+; Top-level Entity Name           ; top_level_matrix                            ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 3288                                        ;
+; Total pins                      ; 40                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA4U23C6       ;                    ;
+; Top-level entity name                                                           ; top_level_matrix   ; top_level_matrix   ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 20          ;
+; Maximum allowed            ; 14          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 14          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processor 9            ;   0.0%      ;
+;     Processors 10-14       ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                      ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                  ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------+---------+
+; decode7.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/decode7.sv              ;         ;
+; decode2.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/decode2.sv              ;         ;
+; adcinterface.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/adcinterface.sv         ;         ;
+; etch_a_sketch.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/etch_a_sketch.sv        ;         ;
+; encoder.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/encoder.sv              ;         ;
+; two_port_ram.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/two_port_ram.sv         ;         ;
+; top_level_matrix.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/top_level_matrix.sv     ;         ;
+; led_matrix_data_path.sv          ; yes             ; User SystemVerilog HDL File  ; C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/led_matrix_data_path.sv ;         ;
+; led_matrix_ctrl_path.sv          ; yes             ; User SystemVerilog HDL File  ; C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/led_matrix_ctrl_path.sv ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimate of Logic utilization (ALMs needed) ; 2669       ;
+;                                             ;            ;
+; Combinational ALUT usage for logic          ; 4002       ;
+;     -- 7 input functions                    ; 0          ;
+;     -- 6 input functions                    ; 1158       ;
+;     -- 5 input functions                    ; 28         ;
+;     -- 4 input functions                    ; 565        ;
+;     -- <=3 input functions                  ; 2251       ;
+;                                             ;            ;
+; Dedicated logic registers                   ; 3288       ;
+;                                             ;            ;
+; I/O pins                                    ; 40         ;
+;                                             ;            ;
+; Total DSP Blocks                            ; 0          ;
+;                                             ;            ;
+; Maximum fan-out node                        ; counter[2] ;
+; Maximum fan-out                             ; 3238       ;
+; Total fan-out                               ; 26879      ;
+; Average fan-out                             ; 3.65       ;
++---------------------------------------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                             ;
++-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                        ; Entity Name          ; Library Name ;
++-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------+----------------------+--------------+
+; |top_level_matrix                   ; 4002 (25)           ; 3288 (18)                 ; 0                 ; 0          ; 40   ; 0            ; |top_level_matrix                                                          ; top_level_matrix     ; work         ;
+;    |adcinterface:adcinterface_0|    ; 13 (13)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |top_level_matrix|adcinterface:adcinterface_0                              ; adcinterface         ; work         ;
+;    |decode2:decode2_0|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_level_matrix|decode2:decode2_0                                        ; decode2              ; work         ;
+;    |decode7:decode7_0|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_level_matrix|decode7:decode7_0                                        ; decode7              ; work         ;
+;    |encoder:encoder_1|              ; 11 (11)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |top_level_matrix|encoder:encoder_1                                        ; encoder              ; work         ;
+;    |encoder:encoder_2|              ; 11 (11)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |top_level_matrix|encoder:encoder_2                                        ; encoder              ; work         ;
+;    |etch_a_sketch:game_logic|       ; 2265 (2265)         ; 1597 (1597)               ; 0                 ; 0          ; 0    ; 0            ; |top_level_matrix|etch_a_sketch:game_logic                                 ; etch_a_sketch        ; work         ;
+;    |led_matrix_ctrl_path:ctrl_path| ; 65 (65)             ; 44 (44)                   ; 0                 ; 0          ; 0    ; 0            ; |top_level_matrix|led_matrix_ctrl_path:ctrl_path                           ; led_matrix_ctrl_path ; work         ;
+;    |led_matrix_data_path:data_path| ; 1603 (533)          ; 1563 (21)                 ; 0                 ; 0          ; 0    ; 0            ; |top_level_matrix|led_matrix_data_path:data_path                           ; led_matrix_data_path ; work         ;
+;       |two_port_ram:color_matrix|   ; 1070 (1070)         ; 1542 (1542)               ; 0                 ; 0          ; 0    ; 0            ; |top_level_matrix|led_matrix_data_path:data_path|two_port_ram:color_matrix ; two_port_ram         ; work         ;
++-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------+----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_level_matrix|adcinterface:adcinterface_0|state                                                         ;
++--------------------------+--------------------------+-------------------------+--------------------------+------------------+
+; Name                     ; state.STATE_CAPTURE_DATA ; state.STATE_SEND_CONFIG ; state.STATE_CONVST_PULSE ; state.STATE_IDLE ;
++--------------------------+--------------------------+-------------------------+--------------------------+------------------+
+; state.STATE_IDLE         ; 0                        ; 0                       ; 0                        ; 0                ;
+; state.STATE_CONVST_PULSE ; 0                        ; 0                       ; 1                        ; 1                ;
+; state.STATE_SEND_CONFIG  ; 0                        ; 1                       ; 0                        ; 1                ;
+; state.STATE_CAPTURE_DATA ; 1                        ; 0                       ; 0                        ; 1                ;
++--------------------------+--------------------------+-------------------------+--------------------------+------------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------+
+; State Machine - |top_level_matrix|etch_a_sketch:game_logic|draw_colour ;
++-----------------+-----------------+-----------------+------------------+
+; Name            ; draw_colour.100 ; draw_colour.010 ; draw_colour.001  ;
++-----------------+-----------------+-----------------+------------------+
+; draw_colour.100 ; 0               ; 0               ; 0                ;
+; draw_colour.010 ; 1               ; 1               ; 0                ;
+; draw_colour.001 ; 1               ; 0               ; 1                ;
++-----------------+-----------------+-----------------+------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_level_matrix|led_matrix_ctrl_path:ctrl_path|state                                                                 ;
++---------------+-----------+------------+--------------+-------------+------------+------------+-----------+------------+---------------+
+; Name          ; state.INC ; state.DEAD ; state.OUTPUT ; state.LATCH ; state.POST ; state.DATA ; state.PRE ; state.INIT ; state.DEADinc ;
++---------------+-----------+------------+--------------+-------------+------------+------------+-----------+------------+---------------+
+; state.INIT    ; 0         ; 0          ; 0            ; 0           ; 0          ; 0          ; 0         ; 0          ; 0             ;
+; state.PRE     ; 0         ; 0          ; 0            ; 0           ; 0          ; 0          ; 1         ; 1          ; 0             ;
+; state.DATA    ; 0         ; 0          ; 0            ; 0           ; 0          ; 1          ; 0         ; 1          ; 0             ;
+; state.POST    ; 0         ; 0          ; 0            ; 0           ; 1          ; 0          ; 0         ; 1          ; 0             ;
+; state.LATCH   ; 0         ; 0          ; 0            ; 1           ; 0          ; 0          ; 0         ; 1          ; 0             ;
+; state.OUTPUT  ; 0         ; 0          ; 1            ; 0           ; 0          ; 0          ; 0         ; 1          ; 0             ;
+; state.DEAD    ; 0         ; 1          ; 0            ; 0           ; 0          ; 0          ; 0         ; 1          ; 0             ;
+; state.INC     ; 1         ; 0          ; 0            ; 0           ; 0          ; 0          ; 0         ; 1          ; 0             ;
+; state.DEADinc ; 0         ; 0          ; 0            ; 0           ; 0          ; 0          ; 0         ; 1          ; 1             ;
++---------------+-----------+------------+--------------+-------------+------------+------------+-----------+------------+---------------+
+
+
++-----------------------------------------------------------------+
+; Registers Removed During Synthesis                              ;
++----------------------------------------+------------------------+
+; Register name                          ; Reason for Removal     ;
++----------------------------------------+------------------------+
+; clk_div_count[0]                       ; Merged with counter[0] ;
+; adcinterface:adcinterface_0|state~8    ; Lost fanout            ;
+; adcinterface:adcinterface_0|state~9    ; Lost fanout            ;
+; led_matrix_ctrl_path:ctrl_path|state~4 ; Lost fanout            ;
+; led_matrix_ctrl_path:ctrl_path|state~5 ; Lost fanout            ;
+; led_matrix_ctrl_path:ctrl_path|state~6 ; Lost fanout            ;
+; counter[3..31]                         ; Lost fanout            ;
+; Total Number of Removed Registers = 35 ;                        ;
++----------------------------------------+------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 3288  ;
+; Number of registers using Synchronous Clear  ; 55    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 1618  ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 3149  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; etch_a_sketch:game_logic|cursor_pos[1] ; 69      ;
+; etch_a_sketch:game_logic|cursor_pos[2] ; 69      ;
+; etch_a_sketch:game_logic|cursor_pos[3] ; 69      ;
+; etch_a_sketch:game_logic|cursor_pos[5] ; 75      ;
+; etch_a_sketch:game_logic|cursor_pos[6] ; 528     ;
+; etch_a_sketch:game_logic|cursor_pos[7] ; 17      ;
+; Total number of inverted registers = 6 ;         ;
++----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[511][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[510][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[509][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[508][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[507][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[506][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[505][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[504][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[503][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[502][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[501][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[500][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[499][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[498][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[497][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[496][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[495][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[494][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[493][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[492][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[491][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[490][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[489][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[488][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[487][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[486][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[485][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[484][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[483][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[482][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[481][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[480][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[479][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[478][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[477][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[476][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[475][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[474][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[473][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[472][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[471][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[470][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[469][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[468][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[467][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[466][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[465][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[464][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[463][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[462][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[461][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[460][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[459][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[458][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[457][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[456][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[455][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[454][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[453][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[452][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[451][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[450][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[449][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[448][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[447][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[446][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[445][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[444][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[443][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[442][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[441][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[440][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[439][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[438][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[437][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[436][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[435][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[434][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[433][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[432][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[431][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[430][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[429][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[428][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[427][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[426][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[425][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[424][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[423][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[422][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[421][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[420][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[419][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[418][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[417][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[416][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[415][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[414][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[413][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[412][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[411][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[410][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[409][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[408][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[407][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[406][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[405][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[404][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[403][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[402][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[401][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[400][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[399][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[398][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[397][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[396][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[395][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[394][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[393][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[392][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[391][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[390][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[389][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[388][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[387][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[386][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[385][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[384][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[383][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[382][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[381][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[380][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[379][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[378][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[377][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[376][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[375][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[374][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[373][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[372][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[371][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[370][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[369][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[368][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[367][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[366][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[365][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[364][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[363][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[362][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[361][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[360][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[359][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[358][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[357][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[356][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[355][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[354][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[353][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[352][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[351][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[350][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[349][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[348][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[347][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[346][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[345][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[344][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[343][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[342][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[341][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[340][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[339][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[338][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[337][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[336][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[335][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[334][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[333][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[332][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[331][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[330][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[329][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[328][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[327][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[326][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[325][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[324][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[323][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[322][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[321][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[320][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[319][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[318][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[317][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[316][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[315][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[314][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[313][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[312][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[311][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[310][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[309][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[308][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[307][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[306][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[305][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[304][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[303][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[302][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[301][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[300][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[299][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[298][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[297][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[296][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[295][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[294][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[293][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[292][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[291][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[290][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[289][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[288][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[287][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[286][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[285][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[284][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[283][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[282][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[281][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[280][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[279][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[278][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[277][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[276][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[275][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[274][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[273][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[272][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[271][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[270][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[269][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[268][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[267][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[266][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[265][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[264][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[263][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[262][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[261][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[260][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[259][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[258][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[257][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[256][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[255][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[254][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[253][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[252][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[251][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[250][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[249][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[248][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[247][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[246][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[245][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[244][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[243][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[242][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[241][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[240][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[239][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[238][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[237][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[236][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[235][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[234][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[233][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[232][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[231][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[230][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[229][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[228][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[227][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[226][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[225][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[224][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[223][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[222][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[221][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[220][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[219][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[218][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[217][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[216][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[215][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[214][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[213][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[212][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[211][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[210][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[209][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[208][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[207][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[206][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[205][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[204][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[203][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[202][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[201][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[200][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[199][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[198][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[197][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[196][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[195][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[194][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[193][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[192][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[191][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[190][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[189][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[188][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[187][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[186][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[185][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[184][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[183][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[182][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[181][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[180][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[179][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[178][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[177][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[176][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[175][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[174][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[173][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[172][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[171][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[170][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[169][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[168][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[167][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[166][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[165][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[164][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[163][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[162][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[161][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[160][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[159][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[158][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[157][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[156][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[155][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[154][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[153][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[152][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[151][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[150][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[149][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[148][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[147][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[146][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[145][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[144][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[143][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[142][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[141][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[140][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[139][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[138][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[137][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[136][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[135][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[134][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[133][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[132][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[131][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[130][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[129][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[128][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[127][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[126][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[125][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[124][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[123][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[122][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[121][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[120][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[119][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[118][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[117][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[116][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[115][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[114][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[113][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[112][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[111][2]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[110][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[109][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[108][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[107][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[106][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[105][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[104][0]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[103][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[102][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[101][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[100][1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[99][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[98][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[97][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[96][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[95][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[94][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[93][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[92][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[91][2]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[90][2]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[89][2]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[88][2]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[87][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[86][1]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[85][1]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[84][2]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[83][2]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[82][2]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[81][1]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[80][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[79][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[78][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[77][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[76][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[75][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[74][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[73][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[72][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[71][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[70][2]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[69][2]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[68][1]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[67][2]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[66][1]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[65][1]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[64][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[63][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[62][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[61][2]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[60][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[59][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[58][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[57][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[56][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[55][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[54][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[53][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[52][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[51][1]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[50][2]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[49][2]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[48][2]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[47][2]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[46][2]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[45][2]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[44][2]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[43][2]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[42][1]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[41][1]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[40][2]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[39][1]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[38][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[37][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[36][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[35][1]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[34][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[33][1]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[32][2]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[31][2]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[30][1]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[29][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[28][1]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[27][2]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[26][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[25][2]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[24][2]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[23][2]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[22][1]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[21][1]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[20][2]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[19][2]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[18][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[17][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[16][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[15][1]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[14][2]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[13][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[12][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[11][0]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[10][2]                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[9][0]                          ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[8][0]                          ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[7][0]                          ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[6][0]                          ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[5][0]                          ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[4][0]                          ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[3][0]                          ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[2][2]                          ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[1][0]                          ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|input_matrix[0][1]                          ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|cursor_pos[0]                               ;
+; 256:1              ; 6 bits    ; 1020 LEs      ; 1020 LEs             ; 0 LEs                  ; Yes        ; |top_level_matrix|led_matrix_data_path:data_path|two_port_ram:color_matrix|q_a_pipe[0] ;
+; 512:1              ; 3 bits    ; 1023 LEs      ; 1023 LEs             ; 0 LEs                  ; Yes        ; |top_level_matrix|led_matrix_data_path:data_path|write_data[2]                         ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|cursor_pos[2]                               ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; Yes        ; |top_level_matrix|etch_a_sketch:game_logic|cursor_pos[6]                               ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |top_level_matrix|Mux2                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------+
+; Source assignments for Top-level Entity: |top_level_matrix ;
++-----------------------+-------+------+---------------------+
+; Assignment            ; Value ; From ; To                  ;
++-----------------------+-------+------+---------------------+
+; WEAK_PULL_UP_RESISTOR ; ON    ; -    ; enc1_a              ;
+; WEAK_PULL_UP_RESISTOR ; ON    ; -    ; enc1_b              ;
+; WEAK_PULL_UP_RESISTOR ; ON    ; -    ; enc2_a              ;
+; WEAK_PULL_UP_RESISTOR ; ON    ; -    ; enc2_b              ;
++-----------------------+-------+------+---------------------+
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_matrix_ctrl_path:ctrl_path ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; INIT           ; 0000  ; Unsigned Binary                                    ;
+; PRE            ; 0001  ; Unsigned Binary                                    ;
+; DATA           ; 0010  ; Unsigned Binary                                    ;
+; POST           ; 0011  ; Unsigned Binary                                    ;
+; LATCH          ; 0100  ; Unsigned Binary                                    ;
+; OUTPUT         ; 0101  ; Unsigned Binary                                    ;
+; DEAD           ; 0110  ; Unsigned Binary                                    ;
+; INC            ; 0111  ; Unsigned Binary                                    ;
+; DEADinc        ; 1000  ; Unsigned Binary                                    ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: etch_a_sketch:game_logic ;
++-------------------+---------+-----------------------------------------+
+; Parameter Name    ; Value   ; Type                                    ;
++-------------------+---------+-----------------------------------------+
+; SHAKE_THRESHOLD   ; 50      ; Signed Integer                          ;
+; SHAKE_SAMPLE_RATE ; 2500000 ; Signed Integer                          ;
++-------------------+---------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "adcinterface:adcinterface_0" ;
++------+-------+----------+-------------------------------+
+; Port ; Type  ; Severity ; Details                       ;
++------+-------+----------+-------------------------------+
+; chan ; Input ; Info     ; Stuck at GND                  ;
++------+-------+----------+-------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "led_matrix_ctrl_path:ctrl_path"                                                     ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; busy ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "led_matrix_data_path:data_path|two_port_ram:color_matrix" ;
++--------------+-------+----------+----------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                            ;
++--------------+-------+----------+----------------------------------------------------+
+; address_a[8] ; Input ; Info     ; Stuck at GND                                       ;
+; address_b[8] ; Input ; Info     ; Stuck at VCC                                       ;
++--------------+-------+----------+----------------------------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "led_matrix_data_path:data_path" ;
++-------+-------+----------+---------------------------------+
+; Port  ; Type  ; Severity ; Details                         ;
++-------+-------+----------+---------------------------------+
+; RESET ; Input ; Info     ; Stuck at GND                    ;
++-------+-------+----------+---------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 3288                        ;
+;     CLR               ; 20                          ;
+;     CLR SCLR          ; 23                          ;
+;     ENA               ; 1574                        ;
+;     ENA CLR           ; 1575                        ;
+;     SCLR              ; 32                          ;
+;     plain             ; 64                          ;
+; arriav_lcell_comb     ; 4013                        ;
+;     arith             ; 155                         ;
+;         0 data inputs ; 3                           ;
+;         1 data inputs ; 124                         ;
+;         2 data inputs ; 28                          ;
+;     normal            ; 3858                        ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 16                          ;
+;         2 data inputs ; 531                         ;
+;         3 data inputs ; 1559                        ;
+;         4 data inputs ; 565                         ;
+;         5 data inputs ; 28                          ;
+;         6 data inputs ; 1158                        ;
+; boundary_port         ; 40                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.10                        ;
+; Average LUT depth     ; 3.48                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Thu Apr 03 17:51:29 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_level_matrix -c top_level_matrix
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file decode7.sv
+    Info (12023): Found entity 1: decode7 File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/decode7.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file decode2.sv
+    Info (12023): Found entity 1: decode2 File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/decode2.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file adcinterface.sv
+    Info (12023): Found entity 1: adcinterface File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/adcinterface.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file etch_a_sketch.sv
+    Info (12023): Found entity 1: etch_a_sketch File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/etch_a_sketch.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file encoder.sv
+    Info (12023): Found entity 1: encoder File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/encoder.sv Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file two_port_ram.sv
+    Info (12023): Found entity 1: two_port_ram File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/two_port_ram.sv Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file top_level_matrix.sv
+    Info (12023): Found entity 1: top_level_matrix File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/top_level_matrix.sv Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file led_matrix_data_path.sv
+    Info (12023): Found entity 1: led_matrix_data_path File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/led_matrix_data_path.sv Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file led_matrix_ctrl_path.sv
+    Info (12023): Found entity 1: led_matrix_ctrl_path File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/led_matrix_ctrl_path.sv Line: 5
+Warning (10236): Verilog HDL Implicit Net warning at top_level_matrix.sv(103): created implicit net for "busy" File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/top_level_matrix.sv Line: 103
+Info (12127): Elaborating entity "top_level_matrix" for the top level hierarchy
+Info (12128): Elaborating entity "led_matrix_data_path" for hierarchy "led_matrix_data_path:data_path" File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/top_level_matrix.sv Line: 94
+Warning (10230): Verilog HDL assignment warning at led_matrix_data_path.sv(56): truncated value with size 32 to match size of target (9) File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/led_matrix_data_path.sv Line: 56
+Info (12128): Elaborating entity "two_port_ram" for hierarchy "led_matrix_data_path:data_path|two_port_ram:color_matrix" File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/led_matrix_data_path.sv Line: 76
+Info (12128): Elaborating entity "led_matrix_ctrl_path" for hierarchy "led_matrix_ctrl_path:ctrl_path" File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/top_level_matrix.sv Line: 105
+Warning (10230): Verilog HDL assignment warning at led_matrix_ctrl_path.sv(76): truncated value with size 32 to match size of target (3) File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/led_matrix_ctrl_path.sv Line: 76
+Info (12128): Elaborating entity "etch_a_sketch" for hierarchy "etch_a_sketch:game_logic" File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/top_level_matrix.sv Line: 117
+Warning (10036): Verilog HDL or VHDL warning at etch_a_sketch.sv(21): object "shake_flag" assigned a value but never read File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/etch_a_sketch.sv Line: 21
+Warning (10230): Verilog HDL assignment warning at etch_a_sketch.sv(57): truncated value with size 32 to match size of target (9) File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/etch_a_sketch.sv Line: 57
+Warning (10230): Verilog HDL assignment warning at etch_a_sketch.sv(59): truncated value with size 32 to match size of target (9) File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/etch_a_sketch.sv Line: 59
+Warning (10230): Verilog HDL assignment warning at etch_a_sketch.sv(61): truncated value with size 32 to match size of target (9) File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/etch_a_sketch.sv Line: 61
+Warning (10230): Verilog HDL assignment warning at etch_a_sketch.sv(63): truncated value with size 32 to match size of target (9) File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/etch_a_sketch.sv Line: 63
+Warning (10230): Verilog HDL assignment warning at etch_a_sketch.sv(80): truncated value with size 32 to match size of target (23) File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/etch_a_sketch.sv Line: 80
+Warning (10230): Verilog HDL assignment warning at etch_a_sketch.sv(83): truncated value with size 32 to match size of target (12) File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/etch_a_sketch.sv Line: 83
+Info (12128): Elaborating entity "adcinterface" for hierarchy "adcinterface:adcinterface_0" File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/top_level_matrix.sv Line: 120
+Warning (10230): Verilog HDL assignment warning at adcinterface.sv(39): truncated value with size 32 to match size of target (4) File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/adcinterface.sv Line: 39
+Warning (10230): Verilog HDL assignment warning at adcinterface.sv(43): truncated value with size 32 to match size of target (4) File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/adcinterface.sv Line: 43
+Warning (10230): Verilog HDL assignment warning at adcinterface.sv(50): truncated value with size 32 to match size of target (4) File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/adcinterface.sv Line: 50
+Info (12128): Elaborating entity "encoder" for hierarchy "encoder:encoder_1" File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/top_level_matrix.sv Line: 122
+Warning (10036): Verilog HDL or VHDL warning at encoder.sv(18): object "current_state" assigned a value but never read File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/encoder.sv Line: 18
+Info (12128): Elaborating entity "decode2" for hierarchy "decode2:decode2_0" File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/top_level_matrix.sv Line: 125
+Info (12128): Elaborating entity "decode7" for hierarchy "decode7:decode7_0" File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/top_level_matrix.sv Line: 126
+Info (13014): Ignored 4 buffer(s)
+    Info (13019): Ignored 4 SOFT buffer(s)
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "gnd[0]" is stuck at GND File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/top_level_matrix.sv Line: 15
+    Warning (13410): Pin "gnd[1]" is stuck at GND File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/top_level_matrix.sv Line: 15
+    Warning (13410): Pin "gnd[2]" is stuck at GND File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/top_level_matrix.sv Line: 15
+    Warning (13410): Pin "gnd[3]" is stuck at GND File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/top_level_matrix.sv Line: 15
+    Warning (13410): Pin "leds[7]" is stuck at GND File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/top_level_matrix.sv Line: 23
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 34 registers lost all their fanouts during netlist optimizations.
+Warning (20013): Ignored 24 assignments for entity "top_level" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity top_level -section_id Top was ignored
+Info (144001): Generated suppressed messages file C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/output_files/top_level_matrix.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "reset" File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/top_level_matrix.sv Line: 7
+Info (21057): Implemented 5633 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
+    Info (21059): Implemented 31 output pins
+    Info (21061): Implemented 5593 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 48 warnings
+    Info: Peak virtual memory: 4965 megabytes
+    Info: Processing ended: Thu Apr 03 17:51:39 2025
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:15
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/output_files/top_level_matrix.map.smsg.
+
+

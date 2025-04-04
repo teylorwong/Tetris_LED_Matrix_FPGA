@@ -1,0 +1,145 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "clk_out",
+					"strict" : false
+				},
+				{
+					"name" : "RGB0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LAT",
+					"strict" : false
+				},
+				{
+					"name" : "OE",
+					"strict" : false
+				},
+				{
+					"name" : "led_addr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "led_addr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led_addr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[0]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[1]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[2]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[3]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[4]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[5]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ct[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ct[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ct[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ct[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_CONVST",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_SCK",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_SDI",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "s1",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_SDO",
+					"strict" : false
+				},
+				{
+					"name" : "s2",
+					"strict" : false
+				},
+				{
+					"name" : "enc1_a",
+					"strict" : false
+				},
+				{
+					"name" : "enc1_b",
+					"strict" : false
+				},
+				{
+					"name" : "enc2_a",
+					"strict" : false
+				},
+				{
+					"name" : "enc2_b",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
