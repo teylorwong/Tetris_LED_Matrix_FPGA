@@ -11077,7 +11077,7 @@ row_addr[2] <= row_addr[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_level_matrix|etch_a_sketch:game_logic
-clk => shake_flag_next.CLK
+clk => shake_detected.CLK
 clk => shake_timer[0].CLK
 clk => shake_timer[1].CLK
 clk => shake_timer[2].CLK
@@ -14218,7 +14218,7 @@ reset_n => cursor_pos[5].PRESET
 reset_n => cursor_pos[6].PRESET
 reset_n => cursor_pos[7].PRESET
 reset_n => cursor_pos[8].ACLR
-reset_n => shake_flag_next.ACLR
+reset_n => shake_detected.ACLR
 reset_n => shake_timer[0].ACLR
 reset_n => shake_timer[1].ACLR
 reset_n => shake_timer[2].ACLR
@@ -14272,7 +14272,7 @@ enc1_ccw => always0.IN1
 enc2_cw => always0.IN1
 enc2_ccw => always0.IN1
 colour_sw => always0.IN1
-colour_sw => prev_colour_sw.DATAIN
+colour_sw => prev_colour_sw.DATAA
 adc_result[0] => Add6.IN27
 adc_result[1] => Add6.IN26
 adc_result[2] => Add6.IN25
