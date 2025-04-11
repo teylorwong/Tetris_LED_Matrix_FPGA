@@ -1,4 +1,4 @@
-// decode2.sv - ELEX7660 module for Lab1
+// decode2.sv - Decode module for 7-segment display
 // Teylor Wong 2025-01-14
 
 module decode2 (

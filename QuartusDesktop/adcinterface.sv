@@ -1,4 +1,4 @@
-// adcinterface.sv - lab4 module that interfaces with the ltc2308 ADC
+// adcinterface.sv - Module that interfaces with the ltc2308 ADC
 // Teylo Wong 01/31/25
 
 module adcinterface(

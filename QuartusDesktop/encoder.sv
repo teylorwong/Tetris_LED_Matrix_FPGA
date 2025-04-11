@@ -1,4 +1,4 @@
-// encoder.sv - ELEX7660 module for Lab2
+// encoder.sv - ELEX7660 module from Lab2
 // Generates a pulse after 4 encoder transitions (debounced)
 // Teylor Wong 2025-01-20
 

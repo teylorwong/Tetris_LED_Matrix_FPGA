@@ -1,5 +1,5 @@
 Timing Analyzer report for top_level_matrix
-Thu Apr 10 14:01:01 2025
+Fri Apr 11 08:56:37 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -96,27 +96,23 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 20          ;
-; Maximum allowed            ; 14          ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 10          ;
 ;                            ;             ;
-; Average used               ; 3.83        ;
-; Maximum used               ; 14          ;
+; Average used               ; 3.29        ;
+; Maximum used               ; 10          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  25.0%      ;
-;     Processor 3            ;  23.1%      ;
-;     Processor 4            ;  22.5%      ;
-;     Processor 5            ;  21.2%      ;
-;     Processor 6            ;  21.2%      ;
-;     Processor 7            ;  21.2%      ;
-;     Processor 8            ;  21.2%      ;
-;     Processor 9            ;  21.2%      ;
-;     Processor 10           ;  21.2%      ;
-;     Processor 11           ;  21.2%      ;
-;     Processor 12           ;  21.2%      ;
-;     Processor 13           ;  21.2%      ;
-;     Processor 14           ;  21.2%      ;
+;     Processor 2            ;  29.2%      ;
+;     Processor 3            ;  27.8%      ;
+;     Processor 4            ;  26.2%      ;
+;     Processor 5            ;  25.1%      ;
+;     Processor 6            ;  25.1%      ;
+;     Processor 7            ;  24.5%      ;
+;     Processor 8            ;  23.9%      ;
+;     Processor 9            ;  23.9%      ;
+;     Processor 10           ;  23.8%      ;
 +----------------------------+-------------+
 
 
@@ -764,7 +760,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Apr 10 14:00:56 2025
+    Info: Processing started: Fri Apr 11 08:56:27 2025
 Info: Command: quartus_sta top_level_matrix -c top_level_matrix
 Info: qsta_default_script.tcl version: #1
 Warning (20013): Ignored 24 assignments for entity "top_level" -- entity does not exist in design
@@ -793,7 +789,7 @@ Warning (20013): Ignored 24 assignments for entity "top_level" -- entity does no
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity top_level -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity top_level -section_id Top was ignored
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
+Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'top_level_matrix.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -907,9 +903,9 @@ Info (332146): Worst-case minimum pulse width slack is -0.430
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 31 warnings
-    Info: Peak virtual memory: 5271 megabytes
-    Info: Processing ended: Thu Apr 10 14:01:01 2025
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Peak virtual memory: 5222 megabytes
+    Info: Processing ended: Fri Apr 11 08:56:37 2025
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:18
 
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_level_matrix
-Thu Apr 10 13:57:22 2025
+Fri Apr 11 08:50:16 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -56,7 +56,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Apr 10 13:57:22 2025       ;
+; Analysis & Synthesis Status     ; Successful - Fri Apr 11 08:50:16 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; top_level_matrix                            ;
 ; Top-level Entity Name           ; top_level_matrix                            ;
@@ -168,22 +168,19 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 20          ;
-; Maximum allowed            ; 14          ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 10          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 14          ;
+; Maximum used               ; 10          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.0%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 ;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
-;     Processor 7            ;   0.0%      ;
-;     Processor 8            ;   0.0%      ;
-;     Processors 9-14        ;   0.0%      ;
+;     Processors 6-10        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -984,7 +981,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -994,10 +991,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Apr 10 13:57:13 2025
+    Info: Processing started: Fri Apr 11 08:49:15 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_level_matrix -c top_level_matrix
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
+Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file decode7.sv
     Info (12023): Found entity 1: decode7 File: C:/Users/teylo/Documents/GitHub/Tetris_LED_Matrix_FPGA/QuartusDesktop/decode7.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file decode2.sv
@@ -1083,10 +1080,10 @@ Info (21057): Implemented 5628 device resources after synthesis - the final reso
     Info (21059): Implemented 31 output pins
     Info (21061): Implemented 5588 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 47 warnings
-    Info: Peak virtual memory: 4934 megabytes
-    Info: Processing ended: Thu Apr 10 13:57:22 2025
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Peak virtual memory: 4943 megabytes
+    Info: Processing ended: Fri Apr 11 08:50:16 2025
+    Info: Elapsed time: 00:01:01
+    Info: Total CPU time (on all processors): 00:00:21
 
 
 +------------------------------------------+

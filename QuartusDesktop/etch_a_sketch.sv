@@ -1,26 +1,26 @@
 module etch_a_sketch (
-    input logic clk,
-    input logic reset_n,
-    input logic enc1_cw, enc1_ccw,
-    input logic enc2_cw, enc2_ccw,
-    input logic colour_sw,
-    input logic [11:0] adc_result,
-    output logic [2:0] input_matrix [511:0]
+    input logic clk,                // System clock
+    input logic reset_n,            // Active low reset
+    input logic enc1_cw, enc1_ccw,  // Rotary encoder 1 signals
+    input logic enc2_cw, enc2_ccw,  // Rotary encoder 2 signals
+    input logic colour_sw,          // Colour switch signal
+    input logic [11:0] adc_result,  // ADC result from the adcinterface
+    output logic [2:0] input_matrix [511:0] // 2D array for LED matrix
 );
 
-    parameter SHAKE_THRESHOLD = 200;
-    parameter SHAKE_SAMPLE_RATE = 1000000;
+    parameter SHAKE_THRESHOLD = 200;        // ADC threshold for shake detection
+    parameter SHAKE_SAMPLE_RATE = 1000000;  // Sample rate for shake detection
 
-    logic [8:0] cursor_pos;
-    logic [2:0] draw_colour;
-    logic prev_colour_sw;
+    logic [8:0] cursor_pos;     // Cursor position on the matrix (0-511)
+    logic [2:0] draw_colour;    // Current drawing colour
+    logic prev_colour_sw;       // Previous state of the colour switch
 
     // Shake detection
-    logic [11:0] adc_avg, adc_prev;
-    logic [22:0] shake_timer;
-    logic shake_detected;
+    logic [11:0] adc_avg, adc_prev; // Average and previous ADC values
+    logic [22:0] shake_timer;       // Timer for shake detection
+    logic shake_detected;           // Shake detection flag
 
-    // Unified Reset Procedure
+    // Unified reset procedure to initialize the game state
     task reset_procedure;
         begin
             cursor_pos <= 238;
@@ -40,7 +40,7 @@ module etch_a_sketch (
             if (shake_detected) begin
                 reset_procedure();
             end else begin
-                // Colour switch
+                // Colour switch (debounced)
                 if (colour_sw && !prev_colour_sw) begin
                     case (draw_colour)
                         3'b100: draw_colour <= 3'b010;
@@ -51,7 +51,7 @@ module etch_a_sketch (
                 end
                 prev_colour_sw <= colour_sw;
 
-                // Cursor move
+                // Cursor movement
                 if (enc1_cw && (cursor_pos % 32) < 31)
                     cursor_pos <= cursor_pos + 1;
                 if (enc1_ccw && (cursor_pos % 32) > 0)
@@ -61,7 +61,7 @@ module etch_a_sketch (
                 if (enc2_ccw && (cursor_pos + 32 < 512))
                     cursor_pos <= cursor_pos + 32;
 
-                // Draw
+                // Draw on matrix
                 input_matrix[cursor_pos] <= draw_colour;
             end
         end
@@ -69,7 +69,7 @@ module etch_a_sketch (
 
     // Shake Detection Logic
     always_ff @(posedge clk or negedge reset_n) begin
-        if (!reset_n) begin
+        if (!reset_n) begin // Resets adc logic
             adc_avg <= 0;
             adc_prev <= 0;
             shake_timer <= 0;
@@ -80,8 +80,9 @@ module etch_a_sketch (
                 shake_timer <= shake_timer + 1;
             end else begin
                 shake_timer <= 0;
+                // Moving Average filter from ChatGPT
                 adc_avg <= (adc_avg * 3 + adc_result) >> 2;
-
+                // Check if the ADC value exceeds the threshold
                 if ((adc_avg > adc_prev + SHAKE_THRESHOLD) || 
                     (adc_avg < adc_prev - SHAKE_THRESHOLD)) begin
                     shake_detected <= 1;
